@@ -1,0 +1,43 @@
+//colors
+$color-froly-approx: #fa787e;
+$color-pastel-green-approx: #78fa89;
+
+.content {
+  margin-top: 50px;
+}
+
+[ng-cloak] {
+  display: none !important;
+}
+
+[data-ng-cloak] {
+  display: none !important;
+}
+
+[x-ng-cloak] {
+  display: none !important;
+}
+
+.ng-cloak {
+  display: none !important;
+}
+
+.x-ng-cloak {
+  display: none !important;
+}
+
+.undecorated-link:hover {
+  text-decoration: none;
+}
+
+[ng\:cloak] {
+  display: none !important;
+}
+
+.ng-invalid.ng-dirty {
+  border-color: $color_froly_approx;
+}
+
+.ng-valid.ng-dirty {
+  border-color: $color_pastel_green_approx;
+}
