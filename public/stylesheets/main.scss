@@ -1,7 +1,7 @@
-@import 'variables';
+@import '../lib/bourbon/app/assets/stylesheets/bourbon';
+@import '../lib/neat/app/assets/stylesheets/neat';
 
-@import '../lib/bootstrap-sass/assets/stylesheets/bootstrap-sprockets';
-@import '../lib/bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'variables';
 
 @import '../modules/core/scss/core';
 @import '../modules/users/scss/users';

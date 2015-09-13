@@ -6,38 +6,14 @@ $color-pastel-green-approx: #78fa89;
   margin-top: 50px;
 }
 
-[ng-cloak] {
-  display: none !important;
-}
-
-[data-ng-cloak] {
-  display: none !important;
-}
-
-[x-ng-cloak] {
-  display: none !important;
-}
-
-.ng-cloak {
-  display: none !important;
-}
-
-.x-ng-cloak {
-  display: none !important;
-}
-
 .undecorated-link:hover {
   text-decoration: none;
 }
 
-[ng\:cloak] {
-  display: none !important;
-}
-
 .ng-invalid.ng-dirty {
-  border-color: $color_froly_approx;
+  border-color: $color-froly-approx;
 }
 
 .ng-valid.ng-dirty {
-  border-color: $color_pastel_green_approx;
+  border-color: $color-pastel-green-approx;
 }

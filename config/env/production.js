@@ -5,8 +5,8 @@ module.exports = {
   assets: {
     lib: {
       scss: [
-        'public/lib/bootstrap-sass/assets/stylesheets/_bootstrap.scss',
-        'public/lib/bootstrap-sass/assets/stylesheets/_bootstrap-sprockets.scss'
+        'public/lib/bourbon/app/assets/stylesheets/_bourbon.scss',
+        'public/lib/neat/app/assets/stylesheets/_neat.scss'
       ],
       js: [
         'public/lib/angular/angular.min.js',
