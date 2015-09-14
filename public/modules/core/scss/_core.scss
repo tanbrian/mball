@@ -1,19 +1,19 @@
-//colors
-$color-froly-approx: #fa787e;
-$color-pastel-green-approx: #78fa89;
+// Global settings
 
-.content {
-  margin-top: 50px;
+body {
+  margin: 0;  // for divs to reach full width of viewport
 }
 
-.undecorated-link:hover {
-  text-decoration: none;
+.container {
+  @include outer-container;
 }
 
-.ng-invalid.ng-dirty {
-  border-color: $color-froly-approx;
-}
+// Landing page
 
-.ng-valid.ng-dirty {
-  border-color: $color-pastel-green-approx;
+.landing-image {
+  background: linear-gradient(135deg, rgba(85,71,124,0.8) 0%,rgba(85,71,124,0.87) 34%,rgba(0,3,51,1) 100%),
+              url('/modules/core/img/waterway.jpg') no-repeat center center fixed;
+
+  @include background-cover;  // resizes image
+  height: 800px;
 }

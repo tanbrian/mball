@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400|Lobster+Two:400italic|Merriweather);
 /* line 4, ../lib/neat/app/assets/stylesheets/grid/_box-sizing.scss */
 html {
   box-sizing: border-box; }
@@ -6,21 +7,29 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-/* line 5, ../modules/core/scss/_core.scss */
-.content {
-  margin-top: 50px; }
+/* line 3, ../modules/core/scss/_core.scss */
+body {
+  margin: 0; }
 
-/* line 9, ../modules/core/scss/_core.scss */
-.undecorated-link:hover {
-  text-decoration: none; }
+/* line 7, ../modules/core/scss/_core.scss */
+.container {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 20, ../lib/bourbon/app/assets/stylesheets/addons/_clearfix.scss */
+  .container::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 /* line 13, ../modules/core/scss/_core.scss */
-.ng-invalid.ng-dirty {
-  border-color: #fa787e; }
-
-/* line 17, ../modules/core/scss/_core.scss */
-.ng-valid.ng-dirty {
-  border-color: #78fa89; }
+.landing-image {
+  background: linear-gradient(135deg, rgba(85, 71, 124, 0.8) 0%, rgba(85, 71, 124, 0.87) 34%, #000333 100%), url("/modules/core/img/waterway.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 800px; }
 
 @media (min-width: 992px) {
   /* line 2, ../modules/users/scss/_users.scss */

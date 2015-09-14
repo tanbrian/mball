@@ -1,0 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400|Lobster+Two:400italic|Merriweather);
+
+// Typography
+
+$display: 'Lobster Two', cursive;
+$header: 'Lato', sans-serif;
+$serif: 'Merriweather', serif;
+
+$header-font-family: $header;
+$base-font-family: $serif;
+$base-font-size: 1em;
+
+// Colors
+
+$purple: #55477c;
+$dark-gray: #333;
