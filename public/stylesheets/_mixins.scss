@@ -1,8 +1,17 @@
 // Mixins for global use.
 
-@mixin background-cover {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+@mixin triangle-divide($top-offset, $bottom-offset,
+                       $top-width, $right-width, $bottom-width, $left-width,
+                       $right-color, $left-color) {
+  content: '';
+  position: absolute;
+
+  top: $top-offset;
+  bottom: $bottom-offset;
+  width: 0;
+  height: 0;
+
+  border-style: solid;
+  border-width: $top-width $right-width $bottom-width $left-width;
+  border-color: transparent $right-color transparent $left-color;
 }

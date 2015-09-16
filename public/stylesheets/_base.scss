@@ -1,0 +1,35 @@
+// Container
+
+body {
+  margin: 0;  // for divs to reach full width of viewport
+}
+
+.container {
+  @include outer-container;
+}
+
+// Typography
+
+h1, h2, h3 {
+  color: $base-font-color;
+  font-family: $header-font-family;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 300;
+}
+
+h3 {
+  font-weight: normal;
+}
+
+p {
+  color: $base-font-color;
+  font-famiy: $base-font-family;
+}
+
+// Miscelleanous
+
+.light-emphasis { color: $light-emphasis; }
+.emphasis { color: $purple; }

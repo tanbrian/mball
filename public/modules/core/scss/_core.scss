@@ -1,19 +1,91 @@
-// Global settings
+// Landing presentation
 
-body {
-  margin: 0;  // for divs to reach full width of viewport
+@include media($tablet) {
+  .title {
+    color: $dark-gray;
+  }
 }
 
-.container {
-  @include outer-container;
+@include media($mobile) {
+  .title {
+    color: $purple;
+  }
 }
 
-// Landing page
 
 .landing-image {
-  background: linear-gradient(135deg, rgba(85,71,124,0.8) 0%,rgba(85,71,124,0.87) 34%,rgba(0,3,51,1) 100%),
-              url('/modules/core/img/waterway.jpg') no-repeat center center fixed;
 
-  @include background-cover;  // resizes image
-  height: 800px;
+  background: linear-gradient(135deg, rgba(85, 71, 124, .8) 0%, rgba(85, 71, 124, .87) 34%, rgba(0, 3, 51, 1) 100%),
+              url('/modules/core/img/waterway.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+  height: 80vh;
+
+  h1 {
+    color: $white;
+    letter-spacing: .2em;
+  }
+
+  h3 {
+    color: $white;
+  }
+
+  .title {
+    font-family: $display;
+    font-size: 4em;
+    font-style: italic;
+    letter-spacing: normal;
+  }
+}
+
+.landing-hero {
+  @include span-columns(6);
+  padding-top: 25vh;
+  padding-left: 15px;
+}
+
+.announcements-view {
+  @include span-columns(6);
+}
+
+// Countdown below landing presentation
+
+.countdown {
+  background-color: $light-gray;
+  height: 20vh;
+
+  h1 { margin-left: 15px; }
+
+  position: relative;   // relative to countdown div
+
+  &:before { @include triangle-divide(-7vh, auto, 7vh, 0, 0, 100vw, transparent, $light-gray); }
+  &:after { @include triangle-divide(auto, -7vh, 0, 100vw, 7vh, 0, $light-gray, transparent); }
+}
+
+.timer-container {
+  @include span-columns(9);
+  @include shift(2);
+
+  .time-value {
+    @include span-columns(3 of 9);
+
+    overflow: hidden;
+
+    h1 {
+      color: $purple;
+      float: left;
+      font-size: 4em;
+      letter-spacing: .2em;
+    }
+
+    h3 {
+      color: $light-emphasis;
+      font-family: $serif;
+    }
+  }
+}
+
+.content {
+  background-color: $dark-gray;
+  height: 500px;
 }

@@ -1,5 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400|Lobster+Two:400italic|Merriweather);
 
+// Colors
+
+$white: #fff;
+$purple: #55477c;
+$light-gray: #dfdfdf;
+$medium-gray: #b4b4b4;
+$dark-gray: #242424;
+$light-emphasis: $medium-gray;
+
 // Typography
 
 $display: 'Lobster Two', cursive;
@@ -9,8 +18,4 @@ $serif: 'Merriweather', serif;
 $header-font-family: $header;
 $base-font-family: $serif;
 $base-font-size: 1em;
-
-// Colors
-
-$purple: #55477c;
-$dark-gray: #333;
+$base-font-color: $dark-gray;
