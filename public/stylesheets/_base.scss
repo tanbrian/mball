@@ -10,7 +10,9 @@ body {
 
 // Typography
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: $base-font-color;
   font-family: $header-font-family;
   margin: 0;

@@ -23,91 +23,66 @@ body {
     display: table; }
 
 /* line 13, ../stylesheets/_base.scss */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: #242424;
   font-family: "Lato", sans-serif;
   margin: 0; }
 
-/* line 19, ../stylesheets/_base.scss */
+/* line 21, ../stylesheets/_base.scss */
 h1 {
   font-weight: 300; }
 
-/* line 23, ../stylesheets/_base.scss */
+/* line 25, ../stylesheets/_base.scss */
 h3 {
   font-weight: normal; }
 
-/* line 27, ../stylesheets/_base.scss */
+/* line 29, ../stylesheets/_base.scss */
 p {
   color: #242424;
   font-famiy: "Merriweather", serif; }
 
-/* line 34, ../stylesheets/_base.scss */
+/* line 36, ../stylesheets/_base.scss */
 .light-emphasis {
   color: #b4b4b4; }
 
-/* line 35, ../stylesheets/_base.scss */
+/* line 37, ../stylesheets/_base.scss */
 .emphasis {
   color: #55477c; }
 
-@media screen and (max-width: 768px) {
-  /* line 4, ../modules/core/scss/_core.scss */
-  .title {
-    color: #242424; } }
-@media screen and (max-width: 480px) {
-  /* line 10, ../modules/core/scss/_core.scss */
-  .title {
-    color: #55477c; } }
-/* line 16, ../modules/core/scss/_core.scss */
+/* line 3, ../modules/core/scss/_core.scss */
 .landing-image {
   background: linear-gradient(135deg, rgba(85, 71, 124, 0.8) 0%, rgba(85, 71, 124, 0.87) 34%, #000333 100%), url("/modules/core/img/waterway.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 80vh; }
-  /* line 24, ../modules/core/scss/_core.scss */
+  /* line 11, ../modules/core/scss/_core.scss */
   .landing-image h1 {
-    color: #fff;
+    color: #dfdfdf;
     letter-spacing: .2em; }
-  /* line 29, ../modules/core/scss/_core.scss */
-  .landing-image h3 {
-    color: #fff; }
-  /* line 33, ../modules/core/scss/_core.scss */
+  /* line 16, ../modules/core/scss/_core.scss */
   .landing-image .title {
+    color: #fff;
     font-family: "Lobster Two", cursive;
     font-size: 4em;
     font-style: italic;
     letter-spacing: normal; }
 
-/* line 41, ../modules/core/scss/_core.scss */
+/* line 25, ../modules/core/scss/_core.scss */
 .landing-hero {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%;
-  padding-top: 25vh;
-  padding-left: 15px; }
-  /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
-  .landing-hero:last-child {
-    margin-right: 0; }
+  padding-left: 15px;
+  padding-top: 25vh; }
 
-/* line 47, ../modules/core/scss/_core.scss */
-.announcements-view {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%; }
-  /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
-  .announcements-view:last-child {
-    margin-right: 0; }
-
-/* line 53, ../modules/core/scss/_core.scss */
-.countdown {
+/* line 32, ../modules/core/scss/_core.scss */
+.countdown-container {
   background-color: #dfdfdf;
   height: 20vh;
   position: relative; }
-  /* line 57, ../modules/core/scss/_core.scss */
-  .countdown h1 {
+  /* line 38, ../modules/core/scss/_core.scss */
+  .countdown-container h1 {
     margin-left: 15px; }
-  /* line 61, ../modules/core/scss/_core.scss */
-  .countdown:before {
+  /* line 40, ../modules/core/scss/_core.scss */
+  .countdown-container:before {
     content: '';
     position: absolute;
     top: -7vh;
@@ -117,8 +92,8 @@ p {
     border-style: solid;
     border-width: 7vh 0 0 100vw;
     border-color: transparent transparent transparent #dfdfdf; }
-  /* line 62, ../modules/core/scss/_core.scss */
-  .countdown:after {
+  /* line 41, ../modules/core/scss/_core.scss */
+  .countdown-container:after {
     content: '';
     position: absolute;
     top: auto;
@@ -129,38 +104,32 @@ p {
     border-width: 0 100vw 7vh 0;
     border-color: transparent #dfdfdf transparent transparent; }
 
-/* line 65, ../modules/core/scss/_core.scss */
-.timer-container {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%;
-  margin-left: 17.05961%; }
-  /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
-  .timer-container:last-child {
-    margin-right: 0; }
-  /* line 69, ../modules/core/scss/_core.scss */
-  .timer-container .time-value {
+/* line 44, ../modules/core/scss/_core.scss */
+mb-countdown {
+  width: 100%; }
+  /* line 47, ../modules/core/scss/_core.scss */
+  mb-countdown .time-value {
     float: left;
     display: block;
-    margin-right: 3.16844%;
-    width: 31.22104%;
-    overflow: hidden; }
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    height: 60px; }
     /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
-    .timer-container .time-value:last-child {
+    mb-countdown .time-value:last-child {
       margin-right: 0; }
-    /* line 74, ../modules/core/scss/_core.scss */
-    .timer-container .time-value h1 {
+    /* line 52, ../modules/core/scss/_core.scss */
+    mb-countdown .time-value h1 {
       color: #55477c;
       float: left;
-      font-size: 4em;
-      letter-spacing: .2em; }
-    /* line 81, ../modules/core/scss/_core.scss */
-    .timer-container .time-value h3 {
+      font-size: 3em;
+      margin-right: 15px; }
+    /* line 59, ../modules/core/scss/_core.scss */
+    mb-countdown .time-value h3 {
       color: #b4b4b4;
-      font-family: "Merriweather", serif; }
+      font-family: "Merriweather", serif;
+      line-height: 60px; }
 
-/* line 88, ../modules/core/scss/_core.scss */
+/* line 67, ../modules/core/scss/_core.scss */
 .content {
   background-color: #242424;
   height: 500px; }
