@@ -35,7 +35,10 @@
 
   position: relative;   // relative to countdown div
 
-  h1 { margin-left: 15px; }
+  h1 {
+    letter-spacing: .2em;
+    margin-left: 15px;
+  }
 
   &:before { @include triangle-divide(-7vh, auto, 7vh, 0, 0, 100vw, transparent, $light-gray); }
   &:after { @include triangle-divide(auto, -7vh, 0, 100vw, 7vh, 0, $light-gray, transparent); }
@@ -53,6 +56,7 @@ mb-countdown {
       color: $purple;
       float: left;
       font-size: 3em;
+      letter-spacing: normal;
       margin-right: 15px;
     }
 
@@ -64,7 +68,61 @@ mb-countdown {
   }
 }
 
-.content {
+// Section containing announcements
+
+.announcements-view,
+.view-header,
+.view-content {
+  height: 700px;
+}
+
+.announcements-view { background-color: $dark-gray; }
+
+// Header section
+
+.view-header {
+  background: linear-gradient(to bottom, rgba(85, 71, 124, .75) 0%,rgba(85, 71, 124, .75) 100%),
+              url('/modules/core/img/lights.jpg') no-repeat center center fixed;
+  background-size: cover;
+  width: 30vw;
+
+  .content { padding-top: 100px; }
+
+  h1,
+  p {
+    color: $white;
+    text-align: center;
+  }
+
+  h1 {
+    letter-spacing: .2em;
+    margin-top: 10px;
+  }
+
+  p {
+    color: $light-gray;
+    margin-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+// Contains announcements content
+
+.view-content {
+  @include pad(100px default 0 default);
+
   background-color: $dark-gray;
-  height: 500px;
+  width: 70vw;
+
+  h3,
+  p {
+    color: white;
+  }
+
+  small { color: $light-gray; }
+
+  .announcement:not(:first-child) {
+    margin-top: 60px;
+  }
 }

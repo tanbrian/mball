@@ -41,15 +41,25 @@ h3 {
 /* line 29, ../stylesheets/_base.scss */
 p {
   color: #242424;
-  font-famiy: "Merriweather", serif; }
+  font-family: "Merriweather", serif;
+  font-size: .8em;
+  line-height: 1.8; }
 
-/* line 36, ../stylesheets/_base.scss */
+/* line 38, ../stylesheets/_base.scss */
 .light-emphasis {
   color: #b4b4b4; }
 
-/* line 37, ../stylesheets/_base.scss */
+/* line 39, ../stylesheets/_base.scss */
 .emphasis {
   color: #55477c; }
+
+/* line 41, ../stylesheets/_base.scss */
+.left {
+  float: left; }
+
+/* line 42, ../stylesheets/_base.scss */
+.right {
+  float: right; }
 
 /* line 3, ../modules/core/scss/_core.scss */
 .landing-image {
@@ -80,8 +90,9 @@ p {
   position: relative; }
   /* line 38, ../modules/core/scss/_core.scss */
   .countdown-container h1 {
+    letter-spacing: .2em;
     margin-left: 15px; }
-  /* line 40, ../modules/core/scss/_core.scss */
+  /* line 43, ../modules/core/scss/_core.scss */
   .countdown-container:before {
     content: '';
     position: absolute;
@@ -92,7 +103,7 @@ p {
     border-style: solid;
     border-width: 7vh 0 0 100vw;
     border-color: transparent transparent transparent #dfdfdf; }
-  /* line 41, ../modules/core/scss/_core.scss */
+  /* line 44, ../modules/core/scss/_core.scss */
   .countdown-container:after {
     content: '';
     position: absolute;
@@ -104,10 +115,10 @@ p {
     border-width: 0 100vw 7vh 0;
     border-color: transparent #dfdfdf transparent transparent; }
 
-/* line 44, ../modules/core/scss/_core.scss */
+/* line 47, ../modules/core/scss/_core.scss */
 mb-countdown {
   width: 100%; }
-  /* line 47, ../modules/core/scss/_core.scss */
+  /* line 50, ../modules/core/scss/_core.scss */
   mb-countdown .time-value {
     float: left;
     display: block;
@@ -117,22 +128,68 @@ mb-countdown {
     /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
     mb-countdown .time-value:last-child {
       margin-right: 0; }
-    /* line 52, ../modules/core/scss/_core.scss */
+    /* line 55, ../modules/core/scss/_core.scss */
     mb-countdown .time-value h1 {
       color: #55477c;
       float: left;
       font-size: 3em;
+      letter-spacing: normal;
       margin-right: 15px; }
-    /* line 59, ../modules/core/scss/_core.scss */
+    /* line 63, ../modules/core/scss/_core.scss */
     mb-countdown .time-value h3 {
       color: #b4b4b4;
       font-family: "Merriweather", serif;
       line-height: 60px; }
 
-/* line 67, ../modules/core/scss/_core.scss */
-.content {
+/* line 73, ../modules/core/scss/_core.scss */
+.announcements-view,
+.view-header,
+.view-content {
+  height: 700px; }
+
+/* line 79, ../modules/core/scss/_core.scss */
+.announcements-view {
+  background-color: #242424; }
+
+/* line 83, ../modules/core/scss/_core.scss */
+.view-header {
+  background: linear-gradient(to bottom, rgba(85, 71, 124, 0.75) 0%, rgba(85, 71, 124, 0.75) 100%), url("/modules/core/img/lights.jpg") no-repeat center center fixed;
+  background-size: cover;
+  width: 30vw; }
+  /* line 89, ../modules/core/scss/_core.scss */
+  .view-header .content {
+    padding-top: 100px; }
+  /* line 91, ../modules/core/scss/_core.scss */
+  .view-header h1,
+  .view-header p {
+    color: #fff;
+    text-align: center; }
+  /* line 97, ../modules/core/scss/_core.scss */
+  .view-header h1 {
+    letter-spacing: .2em;
+    margin-top: 10px; }
+  /* line 102, ../modules/core/scss/_core.scss */
+  .view-header p {
+    color: #dfdfdf;
+    margin-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px; }
+
+/* line 112, ../modules/core/scss/_core.scss */
+.view-content {
+  padding: 100px 2.35765% 0 2.35765%;
   background-color: #242424;
-  height: 500px; }
+  width: 70vw; }
+  /* line 118, ../modules/core/scss/_core.scss */
+  .view-content h3,
+  .view-content p {
+    color: white; }
+  /* line 123, ../modules/core/scss/_core.scss */
+  .view-content small {
+    color: #dfdfdf; }
+  /* line 125, ../modules/core/scss/_core.scss */
+  .view-content .announcement:not(:first-child) {
+    margin-top: 60px; }
 
 @media (min-width: 992px) {
   /* line 2, ../modules/users/scss/_users.scss */
