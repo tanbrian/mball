@@ -33,7 +33,7 @@
 
   h3,
   p {
-    color: white;
+    color: $white;
   }
 
   small { color: $light-gray; }
@@ -51,11 +51,15 @@
   height: 700px;
 }
 
+/*
+ * .announcements-view needs specified height so that .about-view is placed in
+ * the proper place in the DOM
+ */
 .announcements-view {
   background-color: $dark-gray;
 
   .view-header {
-    background: linear-gradient(to bottom, rgba(85, 71, 124, .75) 0%,rgba(85, 71, 124, .75) 100%),
+    background: linear-gradient(to bottom, rgba(85, 71, 124, .75) 0%, rgba(85, 71, 124, .75) 100%),
                 url('/modules/core/img/lights.jpg') no-repeat center center fixed;
     background-size: cover;
   }
@@ -63,6 +67,10 @@
   .view-content { background-color: $dark-gray; }
 }
 
+/*
+ * .about-view needs specified height in order for pseudo-elements to be
+ * properly placed (CSS triangle dividers use :before and :after)
+ */
 .about-view {
 
   .view-header,
@@ -73,14 +81,14 @@
   }
 
   .view-header {
-    background: linear-gradient(to bottom, rgba(253, 192, 112, .75) 0%,rgba(253, 192, 112, .75) 100%),
+    background: linear-gradient(to bottom, rgba(253, 192, 112, .75) 0%, rgba(253, 192, 112, .75) 100%),
                 url('/modules/core/img/lights.jpg') no-repeat center center fixed;
     background-size: cover;
   }
 
   .view-content {
-    padding-top: 50px;
     background-color: $light-gray;
+    padding-top: 50px;
 
     p { color: lighten($base-font-color, 30%); }
   }
@@ -103,8 +111,8 @@
   img {
     @include span-columns(5);
 
-    padding: 3px;
     border: 3px solid $yellow;
+    padding: 3px;
   }
 }
 
@@ -114,5 +122,15 @@
   a {
     color: darken($yellow, 10%);
     &:hover { color: $yellow; }
+  }
+}
+
+.directions-view {
+  height: 500px;
+  background-color: $dark-gray;
+
+  h1,
+  p {
+    color: $white;
   }
 }

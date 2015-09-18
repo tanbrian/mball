@@ -43,8 +43,8 @@ p {
 .right { float: right; }
 
 a {
-  text-decoration: none;
   color: $purple;
+  text-decoration: none;
 
   &:hover { color: darken($purple, 20%); }
 }

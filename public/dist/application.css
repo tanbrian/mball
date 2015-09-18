@@ -67,8 +67,8 @@ p {
 
 /* line 45, ../stylesheets/_base.scss */
 a {
-  text-decoration: none;
-  color: #55477c; }
+  color: #55477c;
+  text-decoration: none; }
   /* line 49, ../stylesheets/_base.scss */
   a:hover {
     color: #29223b; }
@@ -182,7 +182,7 @@ mb-countdown {
   /* line 34, ../modules/core/scss/_home-content.scss */
   .view-content h3,
   .view-content p {
-    color: white; }
+    color: #fff; }
   /* line 39, ../modules/core/scss/_home-content.scss */
   .view-content small {
     color: #dfdfdf; }
@@ -195,35 +195,43 @@ mb-countdown {
 .view-content {
   height: 700px; }
 
-/* line 54, ../modules/core/scss/_home-content.scss */
+/*
+ * .announcements-view needs specified height so that .about-view is placed in
+ * the proper place in the DOM
+ */
+/* line 58, ../modules/core/scss/_home-content.scss */
 .announcements-view {
   background-color: #242424; }
-  /* line 57, ../modules/core/scss/_home-content.scss */
+  /* line 61, ../modules/core/scss/_home-content.scss */
   .announcements-view .view-header {
     background: linear-gradient(to bottom, rgba(85, 71, 124, 0.75) 0%, rgba(85, 71, 124, 0.75) 100%), url("/modules/core/img/lights.jpg") no-repeat center center fixed;
     background-size: cover; }
-  /* line 63, ../modules/core/scss/_home-content.scss */
+  /* line 67, ../modules/core/scss/_home-content.scss */
   .announcements-view .view-content {
     background-color: #242424; }
 
-/* line 68, ../modules/core/scss/_home-content.scss */
+/*
+ * .about-view needs specified height in order for pseudo-elements to be
+ * properly placed (CSS triangle dividers use :before and :after)
+ */
+/* line 76, ../modules/core/scss/_home-content.scss */
 .about-view .view-header,
 .about-view .view-content {
   height: 900px;
   overflow-y: scroll; }
-/* line 75, ../modules/core/scss/_home-content.scss */
+/* line 83, ../modules/core/scss/_home-content.scss */
 .about-view .view-header {
   background: linear-gradient(to bottom, rgba(253, 192, 112, 0.75) 0%, rgba(253, 192, 112, 0.75) 100%), url("/modules/core/img/lights.jpg") no-repeat center center fixed;
   background-size: cover; }
-/* line 81, ../modules/core/scss/_home-content.scss */
+/* line 89, ../modules/core/scss/_home-content.scss */
 .about-view .view-content {
-  padding-top: 50px;
-  background-color: #dfdfdf; }
-  /* line 85, ../modules/core/scss/_home-content.scss */
+  background-color: #dfdfdf;
+  padding-top: 50px; }
+  /* line 93, ../modules/core/scss/_home-content.scss */
   .about-view .view-content p {
     color: #717171; }
 
-/* line 89, ../modules/core/scss/_home-content.scss */
+/* line 97, ../modules/core/scss/_home-content.scss */
 .image-row,
 .description-row {
   max-width: 68em;
@@ -237,10 +245,10 @@ mb-countdown {
     content: "";
     display: table; }
 
-/* line 96, ../modules/core/scss/_home-content.scss */
+/* line 104, ../modules/core/scss/_home-content.scss */
 .image-row {
   margin-bottom: 40px; }
-  /* line 99, ../modules/core/scss/_home-content.scss */
+  /* line 107, ../modules/core/scss/_home-content.scss */
   .image-row .text {
     float: left;
     display: block;
@@ -249,19 +257,19 @@ mb-countdown {
     /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
     .image-row .text:last-child {
       margin-right: 0; }
-  /* line 103, ../modules/core/scss/_home-content.scss */
+  /* line 111, ../modules/core/scss/_home-content.scss */
   .image-row img {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 40.29137%;
-    padding: 3px;
-    border: 3px solid #fdc070; }
+    border: 3px solid #fdc070;
+    padding: 3px; }
     /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
     .image-row img:last-child {
       margin-right: 0; }
 
-/* line 112, ../modules/core/scss/_home-content.scss */
+/* line 120, ../modules/core/scss/_home-content.scss */
 .description-row p {
   float: left;
   display: block;
@@ -270,12 +278,30 @@ mb-countdown {
   /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
   .description-row p:last-child {
     margin-right: 0; }
-/* line 114, ../modules/core/scss/_home-content.scss */
+/* line 122, ../modules/core/scss/_home-content.scss */
 .description-row a {
   color: #fcaa3e; }
-  /* line 116, ../modules/core/scss/_home-content.scss */
+  /* line 124, ../modules/core/scss/_home-content.scss */
   .description-row a:hover {
     color: #fdc070; }
+
+/* line 128, ../modules/core/scss/_home-content.scss */
+.directions-view {
+  height: 500px;
+  background-color: #242424; }
+  /* line 132, ../modules/core/scss/_home-content.scss */
+  .directions-view h1,
+  .directions-view p {
+    color: #fff; }
+
+/* line 2, ../modules/core/scss/_map.scss */
+#map {
+  height: 500px;
+  width: 100vw; }
+
+/* line 1, ../modules/core/scss/_footer.scss */
+.footer {
+  height: 400px; }
 
 @media (min-width: 992px) {
   /* line 2, ../modules/users/scss/_users.scss */
