@@ -16,9 +16,8 @@
     return directive;
   }
 
-  MapController.$inject = ['$scope'];
 
-  function MapController($scope) {
+  function MapController() {
 
     // Location of the San Diego Natural History Museum
     var museumLatLong = new google.maps.LatLng(32.732116, -117.147365);

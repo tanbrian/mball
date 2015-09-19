@@ -1,3 +1,20 @@
+.sign-off {
+  background: linear-gradient(135deg, rgba(85,71,124,1) 0%,rgba(85,71,124,0.57) 100%),
+              url('/modules/core/img/group.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+  height: 400px;
+
+  h1 {
+    @include pad(default);
+
+    color: $white;
+    text-align: center;
+  }
+}
+
 .footer {
+  background-color: $dark-gray;
+
   height: 400px;
 }

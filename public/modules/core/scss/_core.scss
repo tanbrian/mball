@@ -11,3 +11,41 @@
 @import 'map';
 
 @import 'footer';
+
+.breakpoint-info {
+  background: linear-gradient(to bottom, rgba(85, 71, 124, .75) 0%, rgba(85, 71, 124, .75) 100%);
+  border-radius: 3px;
+
+  bottom: 20px;
+
+  color: $white;
+  position: fixed;
+  
+  right: 20px;
+
+  z-index: 1;
+
+  h1 {
+    color: $light-gray;
+    padding: 15px;
+  }
+
+  h1:nth-child(2),
+  h1:last-child { display: none; }
+
+  h1:first-child { display: inline; }
+
+  @include media($tablet) {
+    h1:first-child,
+    h1:last-child { display: none; }
+
+    h1:nth-child(2) { display: inline; }
+  }
+
+  @include media($mobile) {
+    h1:first-child,
+    h1:nth-child(2) { display: none; }
+
+    h1:last-child { display: inline; }
+  }
+}
