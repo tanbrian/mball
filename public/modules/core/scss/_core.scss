@@ -20,20 +20,10 @@
 
   color: $white;
   position: fixed;
-  
+
   right: 20px;
 
   z-index: 1;
-
-  h1 {
-    color: $light-gray;
-    padding: 15px;
-  }
-
-  h1:nth-child(2),
-  h1:last-child { display: none; }
-
-  h1:first-child { display: inline; }
 
   @include media($tablet) {
     h1:first-child,
@@ -48,4 +38,14 @@
 
     h1:last-child { display: inline; }
   }
+
+  h1 {
+    color: $light-gray;
+    padding: 15px;
+  }
+
+  h1:nth-child(2),
+  h1:last-child { display: none; }
+
+  h1:first-child { display: inline; }
 }

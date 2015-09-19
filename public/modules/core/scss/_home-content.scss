@@ -45,9 +45,7 @@
 
 .announcements-view,
 .about-view {
-  display: -ms-flexbox;   // Keeps child divs at equal height
-  display: -webkit-flex;
-  display: flex;
+  @include display-flex;    // Keeps child divs equal height
 }
 
 // Section containing announcements
@@ -61,7 +59,7 @@
     background-size: cover;
   }
 
-  .view-content { background-color: $dark-gray; }
+  .view-content { background-color: lighten($dark-gray, 5%); }
 }
 
 .about-view {
@@ -123,9 +121,14 @@
     color: $white;
   }
 
-  h1, h4 { text-align: center; }
+  h1,
+  h4 { text-align: center; }
 
-  h1 { @include pad(default); }
+  h1 {
+    @include pad(default);
+    letter-spacing: .2em;
+  }
+
   h4 { padding: 0; }
 
   .description-row { @include pad(0 default default default); }

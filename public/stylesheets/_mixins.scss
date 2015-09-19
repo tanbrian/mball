@@ -15,3 +15,27 @@
   border-width: $top-width $right-width $bottom-width $left-width;
   border-color: transparent $right-color transparent $left-color;
 }
+
+@mixin display-flex() {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-center() {
+  @include display-flex;
+
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+
+  align-items: center;
+}
+
+@mixin simple-transition($seconds) {
+  -o-transition: $seconds;
+  -ms-transition: $seconds;
+  -moz-transition: $seconds;
+  -webkit-transition: $seconds;
+  transition: $seconds;
+}
