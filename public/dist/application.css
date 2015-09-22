@@ -385,24 +385,19 @@ mb-countdown {
   .directions-view span {
     color: #8778b1; }
 
-/* line 2, ../modules/core/scss/_map.scss */
-#map {
-  height: 500px;
-  width: 100vw; }
-
-/* line 1, ../modules/core/scss/_footer.scss */
+/* line 143, ../modules/core/scss/_home-content.scss */
 .sign-off {
   background: linear-gradient(135deg, #55477c 0%, rgba(85, 71, 124, 0.6) 100%), url("/modules/core/img/group.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 400px; }
-  /* line 8, ../modules/core/scss/_footer.scss */
+  /* line 150, ../modules/core/scss/_home-content.scss */
   .sign-off h1 {
     padding: 2.35765%;
     color: #fff;
     height: 100px;
     letter-spacing: .2em;
     text-align: center; }
-  /* line 19, ../modules/core/scss/_footer.scss */
+  /* line 161, ../modules/core/scss/_home-content.scss */
   .sign-off .links {
     float: left;
     display: block;
@@ -413,7 +408,7 @@ mb-countdown {
     /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
     .sign-off .links:last-child {
       margin-right: 0; }
-    /* line 25, ../modules/core/scss/_footer.scss */
+    /* line 167, ../modules/core/scss/_home-content.scss */
     .sign-off .links div {
       float: left;
       display: block;
@@ -424,7 +419,7 @@ mb-countdown {
       /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
       .sign-off .links div:last-child {
         margin-right: 0; }
-  /* line 33, ../modules/core/scss/_footer.scss */
+  /* line 175, ../modules/core/scss/_home-content.scss */
   .sign-off a {
     -o-transition: 0.2s;
     -ms-transition: 0.2s;
@@ -435,16 +430,21 @@ mb-countdown {
     color: #fff;
     font-family: "Lato", sans-serif;
     padding: 7px; }
-    /* line 43, ../modules/core/scss/_footer.scss */
+    /* line 185, ../modules/core/scss/_home-content.scss */
     .sign-off a:hover {
       border-color: #fdc070;
       color: #fdc070; }
 
-/* line 50, ../modules/core/scss/_footer.scss */
+/* line 2, ../modules/core/scss/_map.scss */
+#map {
+  height: 500px;
+  width: 100vw; }
+
+/* line 1, ../modules/core/scss/_footer.scss */
 .footer {
   background-color: #242424;
   height: 200px; }
-  /* line 55, ../modules/core/scss/_footer.scss */
+  /* line 6, ../modules/core/scss/_footer.scss */
   .footer h3 {
     color: #b4b4b4;
     font-weight: 300;
