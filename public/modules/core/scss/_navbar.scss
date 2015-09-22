@@ -1,0 +1,49 @@
+.navbar {
+  @include simple-transition(.2s);
+
+  height: 75px;
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
+
+  .logo {
+    @include span-columns(3);
+    height: 75px;
+  }
+
+  .nav-list {
+    @include span-columns(9);
+  }
+
+  ul {
+    @include display-flex;
+    @include flex-direction(row);
+    @include flex-align-items(center);
+    @include flex-justify-content(flex-end);
+
+    height: 75px;
+    margin: 0 auto;
+
+    list-style: none;
+
+    li { padding-left: 10px; }
+
+    a:hover { color: lighten($purple, 30%); }
+  }
+
+  a {
+    @include simple-transition(.2s);
+
+    color: $light-gray;
+    font-family: $header-font-family;
+    font-weight: 400;
+  }
+
+}
+
+.overlay {
+  @include simple-transition(.2s);
+  background: linear-gradient(135deg, rgba(180,180,180,0.75) 0%,rgba(180,180,180,0.75) 100%);
+
+  a { color: $white; }
+}

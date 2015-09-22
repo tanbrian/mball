@@ -52,11 +52,11 @@
     var user = {{ user | json | safe }};
   </script>
 
-  <!-- Google Maps Asynchronous Javascript API -->
-  <script src="https://maps.googleapis.com/maps/api/js?key={{ process.env.MAP_API_KEY }}" type="text/javascript"></script>
-
   <!--Application JavaScript Files-->
   {% for jsFile in jsFiles %}<script type="text/javascript" src="{{jsFile}}"></script>{% endfor %}
+
+  <!-- Google Maps Asynchronous Javascript API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key={{ process.env.MAP_API_KEY }}" type="text/javascript"></script>
 
   {% if process.env.NODE_ENV === 'development' %}
   <!--Livereload script rendered -->

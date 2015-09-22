@@ -22,14 +22,22 @@
   display: flex;
 }
 
-@mixin flex-center() {
-  @include display-flex;
+@mixin flex-align-items($position) {
+  -ms-align-items: $position;
+  -webkit-align-items: $position;
+  align-items: $position;
+}
 
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
+@mixin flex-justify-content($direction) {
+  -ms-justify-content: $direction;
+  -webkit-justify-content: $direction;
+  justify-content: $direction;
+}
 
-  align-items: center;
+@mixin flex-direction($direction) {
+  -ms-flex-direction: $direction;
+  -webkit-flex-direction: $direction;
+  flex-direction: $direction;
 }
 
 @mixin simple-transition($seconds) {

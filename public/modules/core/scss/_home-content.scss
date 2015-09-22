@@ -53,6 +53,8 @@
 .announcements-view {
   background-color: $dark-gray;
 
+  width: 100vw;
+
   .view-header {
     background: linear-gradient(to bottom, rgba(85, 71, 124, .75) 0%, rgba(85, 71, 124, .75) 100%),
                 url('/modules/core/img/lights.jpg') no-repeat center center fixed;

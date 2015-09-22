@@ -1,5 +1,7 @@
 {% extends 'layout.server.view.html' %}
 
 {% block content %}
+  <ng-include src="'modules/core/views/partials/navbar.client.view.html'"></ng-include>
   <div ui-view> </div>
+  <ng-include src="'modules/core/views/partials/footer.client.view.html'"></ng-include>
 {% endblock %}

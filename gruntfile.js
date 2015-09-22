@@ -61,7 +61,7 @@ module.exports = function(grunt) {
       allFiles: watchFiles.clientSCSS,
       options: {
         colorizeOutput: true,
-        exclude: 'public/stylesheets/_cloak.scss'
+        exclude: ['public/stylesheets/_cloak.scss', 'public/stylesheets/_mixins.scss']
       }
     },
     uglify: {
