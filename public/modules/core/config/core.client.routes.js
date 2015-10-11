@@ -13,9 +13,9 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
       url: '/',
       templateUrl: 'modules/core/views/home.client.view.html'
     }).
-    state('schedule', {
-      url: '/schedule',
-      templateUrl: 'modules/core/views/schedule.client.view.html'
+    state('faq', {
+      url: '/faq',
+      templateUrl: 'modules/core/views/faq.client.view.html'
     });
   }
 ]);
