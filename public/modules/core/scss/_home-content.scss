@@ -116,6 +116,7 @@
 
 .directions-view {
   background-color: lighten($dark-gray, 15%);
+  padding-bottom: 3vh;
 
   h1,
   h4,
@@ -136,6 +137,34 @@
   .description-row { @include pad(0 default default default); }
 
   span { color: lighten($purple, 20%); }
+}
+
+// Section containing logos of sponsors
+
+.sponsors-view {
+  @include fill-parent;
+  background-color: $light-gray;
+
+  .slanted-header { margin-bottom: 6vh; }
+
+  img {
+    @include span-columns(4);
+    @include pad(5px);
+  }
+
+  .separator {
+    background-color: lighten($dark-gray, 5%);
+    height: 50px;
+    margin-top: 7vh;
+    position: relative;
+
+    &:before {
+      @include triangle-divide(-5vh, auto, 0, 0, 5vh, 100vw, transparent, lighten($dark-gray, 5%));
+      border-width: 0 0 5vh 100vw;
+      border-color: transparent transparent lighten($dark-gray, 5%) transparent;
+    }
+
+  }
 }
 
 // Last section before footer
@@ -171,7 +200,7 @@
       text-align: center;
     }
   }
-  
+
   a {
     @include simple-transition(.2s);
 

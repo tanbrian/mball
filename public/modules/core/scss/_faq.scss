@@ -44,10 +44,14 @@
 }
 
 .faq-content {
+  background-color: $light-gray;
+
   padding-top: 50px;
   padding-bottom: 100px;
 
-  p {
-    margin-bottom: 50px;
+  .question {
   }
+
+  .view { @include span-columns(4); }
+  .description { @include span-columns(8); }
 }
