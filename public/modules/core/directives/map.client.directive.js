@@ -46,6 +46,13 @@
 
     var googleMap = new google.maps.Map(document.getElementById('map'), mapOptions);
 
+    var contentString = '<h3>San Diego Natural History Museum</h3>' +
+                        '</br>' +
+                        '1788 El Prado, San Diego, CA 92101';
+    var infoWindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+
     var marker = new google.maps.Marker({
       icon: 'http://maps.google.com/mapfiles/ms/icons/purple-dot.png',
       position: museumLatLong,
@@ -53,5 +60,6 @@
     });
 
     marker.setMap(googleMap);
+    infoWindow.open(googleMap, marker);
   }
 })();

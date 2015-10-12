@@ -31,16 +31,12 @@
 
   width: 70vw;
 
-  h3,
-  p {
-    color: $white;
-  }
+  h3 { color: darken($light-gray, 5%); }
+  p { color: $white; }
 
   small { color: $light-gray; }
 
-  .announcement:not(:first-child) {
-    margin-top: 60px;
-  }
+  .announcement:not(:first-child) { margin-top: 60px; }
 }
 
 .announcements-view,

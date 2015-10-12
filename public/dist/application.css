@@ -79,11 +79,11 @@ p {
 
 /* line 54, ../stylesheets/_base.scss */
 a {
-  color: #60508c;
+  color: #8778b1;
   text-decoration: none; }
   /* line 58, ../stylesheets/_base.scss */
   a:hover {
-    color: #29223b; }
+    color: #55477c; }
 
 /* line 1, ../modules/core/scss/_navbar.scss */
 .navbar {
@@ -172,6 +172,15 @@ a {
     color: #f3f3f3;
     letter-spacing: .2em; }
   /* line 15, ../modules/core/scss/_landing.scss */
+  .landing-image a {
+    border: 1px solid #fff;
+    margin-top: 20px; }
+  /* line 20, ../modules/core/scss/_landing.scss */
+  .landing-image h3 {
+    color: #fff;
+    font-family: "Merriweather", serif;
+    font-weight: 300; }
+  /* line 26, ../modules/core/scss/_landing.scss */
   .landing-image .title {
     color: #fff;
     font-family: "Lobster Two", cursive;
@@ -179,7 +188,7 @@ a {
     font-style: italic;
     letter-spacing: normal; }
 
-/* line 24, ../modules/core/scss/_landing.scss */
+/* line 35, ../modules/core/scss/_landing.scss */
 .landing-hero {
   padding-left: 15px;
   padding-top: 25vh; }
@@ -269,48 +278,50 @@ mb-countdown {
   padding: 100px 2.35765% 2.35765% 2.35765%;
   width: 70vw; }
   /* line 34, ../modules/core/scss/_home-content.scss */
-  .view-content h3,
+  .view-content h3 {
+    color: #e6e6e6; }
+  /* line 35, ../modules/core/scss/_home-content.scss */
   .view-content p {
     color: #fff; }
-  /* line 39, ../modules/core/scss/_home-content.scss */
+  /* line 37, ../modules/core/scss/_home-content.scss */
   .view-content small {
     color: #f3f3f3; }
-  /* line 41, ../modules/core/scss/_home-content.scss */
+  /* line 39, ../modules/core/scss/_home-content.scss */
   .view-content .announcement:not(:first-child) {
     margin-top: 60px; }
 
-/* line 46, ../modules/core/scss/_home-content.scss */
+/* line 42, ../modules/core/scss/_home-content.scss */
 .announcements-view,
 .about-view {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex; }
 
-/* line 53, ../modules/core/scss/_home-content.scss */
+/* line 49, ../modules/core/scss/_home-content.scss */
 .announcements-view {
   background-color: #242424;
   width: 100vw; }
-  /* line 58, ../modules/core/scss/_home-content.scss */
+  /* line 54, ../modules/core/scss/_home-content.scss */
   .announcements-view .view-header {
     background: linear-gradient(to bottom, rgba(85, 71, 124, 0.75) 0%, rgba(85, 71, 124, 0.75) 100%), url("/modules/core/img/lights.jpg") no-repeat center center fixed;
     background-size: cover; }
-  /* line 64, ../modules/core/scss/_home-content.scss */
+  /* line 60, ../modules/core/scss/_home-content.scss */
   .announcements-view .view-content {
     background-color: #313131; }
 
-/* line 69, ../modules/core/scss/_home-content.scss */
+/* line 65, ../modules/core/scss/_home-content.scss */
 .about-view .view-header {
   background: linear-gradient(to bottom, rgba(253, 192, 112, 0.75) 0%, rgba(253, 192, 112, 0.75) 100%), url("/modules/core/img/lights.jpg") no-repeat center center fixed;
   background-size: cover; }
-/* line 75, ../modules/core/scss/_home-content.scss */
+/* line 71, ../modules/core/scss/_home-content.scss */
 .about-view .view-content {
   padding: 2.35765%;
   background-color: #f3f3f3; }
-  /* line 80, ../modules/core/scss/_home-content.scss */
+  /* line 76, ../modules/core/scss/_home-content.scss */
   .about-view .view-content p {
     color: #717171; }
 
-/* line 84, ../modules/core/scss/_home-content.scss */
+/* line 80, ../modules/core/scss/_home-content.scss */
 .image-row,
 .description-row {
   max-width: 68em;
@@ -324,10 +335,10 @@ mb-countdown {
     content: "";
     display: table; }
 
-/* line 91, ../modules/core/scss/_home-content.scss */
+/* line 87, ../modules/core/scss/_home-content.scss */
 .image-row {
   margin-bottom: 40px; }
-  /* line 94, ../modules/core/scss/_home-content.scss */
+  /* line 90, ../modules/core/scss/_home-content.scss */
   .image-row .text {
     float: left;
     display: block;
@@ -336,7 +347,7 @@ mb-countdown {
     /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
     .image-row .text:last-child {
       margin-right: 0; }
-  /* line 98, ../modules/core/scss/_home-content.scss */
+  /* line 94, ../modules/core/scss/_home-content.scss */
   .image-row img {
     float: left;
     display: block;
@@ -348,7 +359,7 @@ mb-countdown {
     .image-row img:last-child {
       margin-right: 0; }
 
-/* line 107, ../modules/core/scss/_home-content.scss */
+/* line 103, ../modules/core/scss/_home-content.scss */
 .description-row p {
   float: left;
   display: block;
@@ -357,40 +368,40 @@ mb-countdown {
   /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
   .description-row p:last-child {
     margin-right: 0; }
-/* line 109, ../modules/core/scss/_home-content.scss */
+/* line 105, ../modules/core/scss/_home-content.scss */
 .description-row a {
   color: #fcaa3e; }
-  /* line 111, ../modules/core/scss/_home-content.scss */
+  /* line 107, ../modules/core/scss/_home-content.scss */
   .description-row a:hover {
     color: #fdc070; }
 
-/* line 117, ../modules/core/scss/_home-content.scss */
+/* line 113, ../modules/core/scss/_home-content.scss */
 .directions-view {
   background-color: #4a4a4a;
   padding-bottom: 3vh; }
-  /* line 121, ../modules/core/scss/_home-content.scss */
+  /* line 117, ../modules/core/scss/_home-content.scss */
   .directions-view h1,
   .directions-view h4,
   .directions-view p {
     color: #fff; }
-  /* line 127, ../modules/core/scss/_home-content.scss */
+  /* line 123, ../modules/core/scss/_home-content.scss */
   .directions-view h1,
   .directions-view h4 {
     text-align: center; }
-  /* line 130, ../modules/core/scss/_home-content.scss */
+  /* line 126, ../modules/core/scss/_home-content.scss */
   .directions-view h1 {
     padding: 2.35765%;
     letter-spacing: .2em; }
-  /* line 135, ../modules/core/scss/_home-content.scss */
+  /* line 131, ../modules/core/scss/_home-content.scss */
   .directions-view h4 {
     padding: 0; }
-  /* line 137, ../modules/core/scss/_home-content.scss */
+  /* line 133, ../modules/core/scss/_home-content.scss */
   .directions-view span {
     color: #8778b1; }
-  /* line 139, ../modules/core/scss/_home-content.scss */
+  /* line 135, ../modules/core/scss/_home-content.scss */
   .directions-view .description-row {
     padding: 0 2.35765% 2.35765% 2.35765%; }
-    /* line 142, ../modules/core/scss/_home-content.scss */
+    /* line 138, ../modules/core/scss/_home-content.scss */
     .directions-view .description-row p {
       float: left;
       display: block;
@@ -401,10 +412,10 @@ mb-countdown {
       /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
       .directions-view .description-row p:last-child {
         margin-right: 0; }
-      /* line 147, ../modules/core/scss/_home-content.scss */
+      /* line 143, ../modules/core/scss/_home-content.scss */
       .directions-view .description-row p:first-child {
         margin-left: 8.5298%; }
-    /* line 150, ../modules/core/scss/_home-content.scss */
+    /* line 146, ../modules/core/scss/_home-content.scss */
     .directions-view .description-row a {
       -o-transition: 0.2s;
       -ms-transition: 0.2s;
@@ -413,18 +424,18 @@ mb-countdown {
       transition: 0.2s;
       color: #60508c;
       text-decoration: none; }
-      /* line 155, ../modules/core/scss/_home-content.scss */
+      /* line 151, ../modules/core/scss/_home-content.scss */
       .directions-view .description-row a:hover {
         color: #29223b; }
 
-/* line 162, ../modules/core/scss/_home-content.scss */
+/* line 158, ../modules/core/scss/_home-content.scss */
 .sponsors-view {
   width: 100%;
   background-color: #f3f3f3; }
-  /* line 166, ../modules/core/scss/_home-content.scss */
+  /* line 162, ../modules/core/scss/_home-content.scss */
   .sponsors-view .slanted-header {
     margin-bottom: 6vh; }
-  /* line 168, ../modules/core/scss/_home-content.scss */
+  /* line 164, ../modules/core/scss/_home-content.scss */
   .sponsors-view img {
     float: left;
     display: block;
@@ -434,13 +445,13 @@ mb-countdown {
     /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
     .sponsors-view img:last-child {
       margin-right: 0; }
-  /* line 173, ../modules/core/scss/_home-content.scss */
+  /* line 169, ../modules/core/scss/_home-content.scss */
   .sponsors-view .separator {
     background-color: #313131;
     height: 50px;
     margin-top: 7vh;
     position: relative; }
-    /* line 179, ../modules/core/scss/_home-content.scss */
+    /* line 175, ../modules/core/scss/_home-content.scss */
     .sponsors-view .separator:before {
       content: '';
       position: absolute;
@@ -454,19 +465,19 @@ mb-countdown {
       border-width: 0 0 5vh 100vw;
       border-color: transparent transparent #313131 transparent; }
 
-/* line 190, ../modules/core/scss/_home-content.scss */
+/* line 186, ../modules/core/scss/_home-content.scss */
 .sign-off {
   background: linear-gradient(135deg, #55477c 0%, rgba(85, 71, 124, 0.6) 100%), url("/modules/core/img/group.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 400px; }
-  /* line 197, ../modules/core/scss/_home-content.scss */
+  /* line 193, ../modules/core/scss/_home-content.scss */
   .sign-off h1 {
     padding: 2.35765%;
     color: #fff;
     height: 100px;
     letter-spacing: .2em;
     text-align: center; }
-  /* line 208, ../modules/core/scss/_home-content.scss */
+  /* line 204, ../modules/core/scss/_home-content.scss */
   .sign-off .links {
     float: left;
     display: block;
@@ -477,7 +488,7 @@ mb-countdown {
     /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
     .sign-off .links:last-child {
       margin-right: 0; }
-    /* line 214, ../modules/core/scss/_home-content.scss */
+    /* line 210, ../modules/core/scss/_home-content.scss */
     .sign-off .links div {
       float: left;
       display: block;
@@ -488,7 +499,7 @@ mb-countdown {
       /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
       .sign-off .links div:last-child {
         margin-right: 0; }
-  /* line 222, ../modules/core/scss/_home-content.scss */
+  /* line 218, ../modules/core/scss/_home-content.scss */
   .sign-off a {
     -o-transition: 0.2s;
     -ms-transition: 0.2s;
@@ -499,7 +510,7 @@ mb-countdown {
     color: #fff;
     font-family: "Lato", sans-serif;
     padding: 7px; }
-    /* line 232, ../modules/core/scss/_home-content.scss */
+    /* line 228, ../modules/core/scss/_home-content.scss */
     .sign-off a:hover {
       border-color: #fdc070;
       color: #fdc070; }

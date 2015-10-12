@@ -12,6 +12,17 @@
     letter-spacing: .2em;
   }
 
+  a {
+    border: 1px solid $white;
+    margin-top: 20px;
+  }
+
+  h3 {
+    color: $white;
+    font-family: $base-font-family;
+    font-weight: 300;
+  }
+
   .title {
     color: $white;
     font-family: $display;
