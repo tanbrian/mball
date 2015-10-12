@@ -2,25 +2,26 @@
 
 // Init the application configuration module for AngularJS application
 var ApplicationConfiguration = (function() {
-	// Init module configuration options
-	var applicationModuleName = 'mball';
-	var applicationModuleVendorDependencies = ['ngResource', 'ngCookies',  'ngAnimate',  'ngTouch',  'ngSanitize',  'ui.router', 'ui.bootstrap', 'ui.utils'];
+  // Init module configuration options
+  var applicationModuleName = 'mball';
+  var applicationModuleVendorDependencies = ['ngResource', 'ngCookies',  'ngAnimate',  'ngTouch',  'ngSanitize', 'ui.router', 'ui.utils', 'smoothScroll'];
 
-	// Add a new vertical module
-	var registerModule = function(moduleName, dependencies) {
-		// Create angular module
-		angular.module(moduleName, dependencies || []);
+  // Add a new vertical module
+  var registerModule = function(moduleName, dependencies) {
+    // Create angular module
+    angular.module(moduleName, dependencies || []);
 
-		// Add the module to the AngularJS configuration file
-		angular.module(applicationModuleName).requires.push(moduleName);
-	};
+    // Add the module to the AngularJS configuration file
+    angular.module(applicationModuleName).requires.push(moduleName);
+  };
 
-	return {
-		applicationModuleName: applicationModuleName,
-		applicationModuleVendorDependencies: applicationModuleVendorDependencies,
-		registerModule: registerModule
-	};
+  return {
+    applicationModuleName: applicationModuleName,
+    applicationModuleVendorDependencies: applicationModuleVendorDependencies,
+    registerModule: registerModule
+  };
 })();
+
 'use strict';
 
 //Start by defining the main module and adding the module dependencies
@@ -49,215 +50,229 @@ ApplicationConfiguration.registerModule('core');
 
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('users');
+(function() {
+  'use strict';
+
+  angular
+    .module('core')
+    .constant('home', {
+      'landingPercentage': 0.8,
+      'navigationBarHeight': 75
+    });
+})();
+
 'use strict';
 
 // Setting up route
 angular.module('core').config(['$stateProvider', '$urlRouterProvider',
-	function($stateProvider, $urlRouterProvider) {
-		// Redirect to home view when route not found
-		$urlRouterProvider.otherwise('/');
+  function($stateProvider, $urlRouterProvider) {
 
-		// Home state routing
-		$stateProvider.
-		state('home', {
-			url: '/',
-			templateUrl: 'modules/core/views/home.client.view.html'
-		});
-	}
+    // Redirect to home view when route not found
+    $urlRouterProvider.otherwise('/');
+
+    // Home state routing
+    $stateProvider.
+    state('home', {
+      url: '/',
+      templateUrl: 'modules/core/views/home.client.view.html'
+    }).
+    state('faq', {
+      url: '/faq',
+      templateUrl: 'modules/core/views/faq.client.view.html'
+    });
+  }
 ]);
-'use strict';
 
-angular.module('core').controller('HeaderController', ['$scope', 'Authentication', 'Menus',
-	function($scope, Authentication, Menus) {
-		$scope.authentication = Authentication;
-		$scope.isCollapsed = false;
-		$scope.menu = Menus.getMenu('topbar');
+(function() {
+    'use strict';
 
-		$scope.toggleCollapsibleMenu = function() {
-			$scope.isCollapsed = !$scope.isCollapsed;
-		};
+    // TODO Convert to directive following Angular Style Guide
+    // Joseph if you're looking at this code forgive me pls
 
-		// Collapsing the menu after navigation
-		$scope.$on('$stateChangeSuccess', function() {
-			$scope.isCollapsed = false;
-		});
-	}
-]);
-'use strict';
+    angular
+      .module('core')
+      .controller('NavigationController', ['$scope', '$location', '$rootScope', 'smoothScroll', function($scope, $location, $rootScope, smoothScroll) {
+        $scope.test = 'value';
+
+        $scope.scrollOrLoad = function(scrollDestId) {
+          $location.path('/#!');
+
+          angular.element(document).ready(function () {
+            var element = document.getElementById(scrollDestId);
+
+            var options = {
+              offset: 75
+            }
+
+            smoothScroll(element, options);
+          });
+        }
+      }]);
+})();
+
+/**
+ * mb-countdown directive
+ * @namespace directives
+ */
+(function() {
+  'use strict';
+
+  angular
+    .module('core')
+    .directive('mbCountdown', countdown);
+
+  function countdown() {
+
+    return {
+      restrict: 'E',
+      templateUrl: '/modules/core/views/partials/countdown.client.view.html',
+      controller: CountdownController,
+      controllerAs: 'vm',
+    };
+  }
+
+  CountdownController.$inject = ['$scope', '$interval', '$element'];
+
+  function CountdownController($scope, $interval, $element) {
+
+    var MILL_IN_SEC = 1000;
+    var SEC_IN_DAY = 60 * 60 * 24;
+    var SEC_IN_HOUR = 60 * 60;
+    var SEC_IN_MINUTE = 60;
+    var HOURS_IN_DAY = 24;
+
+    // Masquerade Ball is on November 16, 2015 at 12:30 AM
+    var masqueradeBallDate = Date.UTC(2015, 10, 16, 8, 30, 0);
+    var timeoutId;
+
+    // Calculates new countdown value every second
+    timeoutId = $interval(function() {
+      var currentDate = Date.now();
+
+      // Calculates difference between now and Masquerade Ball in milliseconds
+      var difference = Math.abs(masqueradeBallDate - currentDate) / MILL_IN_SEC;
+
+      $scope.days = Math.floor(difference / SEC_IN_DAY);
+      difference -= $scope.days * SEC_IN_DAY;
+
+      $scope.hours = Math.floor(difference / SEC_IN_HOUR) % HOURS_IN_DAY;
+      difference -= $scope.hours * SEC_IN_HOUR;
+
+      $scope.minutes = Math.floor(difference / SEC_IN_MINUTE) % SEC_IN_MINUTE;
+      difference -= $scope.minutes * SEC_IN_MINUTE;
+
+      $scope.seconds = Math.floor(difference % SEC_IN_MINUTE);
+    }, 1000);
+
+    // Ends interval loop when element is destroyed to revent leaks.
+    $element.on('$destroy', function() {
+      $interval.cancel(timeoutId);
+    });
+  }
+})();
+
+(function() {
+  'use strict';
+
+  angular
+    .module('core')
+    .directive('mbMap', map);
+
+  function map() {
+
+    var directive = {
+      restrict: 'A',
+      controller: MapController,
+      controllerAs: 'vm'
+    };
+
+    return directive;
+  }
 
 
-angular.module('core').controller('HomeController', ['$scope', 'Authentication',
-	function($scope, Authentication) {
-		// This provides Authentication context.
-		$scope.authentication = Authentication;
-	}
-]);
-'use strict';
+  function MapController() {
 
-//Menu service used for managing  menus
-angular.module('core').service('Menus', [
+    // Location of the San Diego Natural History Museum
+    var museumLatLong = new google.maps.LatLng(32.732116, -117.147365);
 
-	function() {
-		// Define a set of default roles
-		this.defaultRoles = ['*'];
+    var styles = [
+      {
+        featureType: 'all',
+        stylers: [
+          { saturation: -70 }
+        ]
+      }, {
+        featureType: 'road.highway',
+        stylers: [
+          { hue: '#55477c' }
+        ]
+      }
+    ];
 
-		// Define the menus object
-		this.menus = {};
+    var mapOptions = {
+      center: museumLatLong,
+      disableDefaultUI: true,
+      scrollwheel: false,
+      styles: styles,
+      zoom: 15
+    };
 
-		// A private function for rendering decision 
-		var shouldRender = function(user) {
-			if (user) {
-				if (!!~this.roles.indexOf('*')) {
-					return true;
-				} else {
-					for (var userRoleIndex in user.roles) {
-						for (var roleIndex in this.roles) {
-							if (this.roles[roleIndex] === user.roles[userRoleIndex]) {
-								return true;
-							}
-						}
-					}
-				}
-			} else {
-				return this.isPublic;
-			}
+    var googleMap = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-			return false;
-		};
+    var contentString = '<h3>San Diego Natural History Museum</h3>' +
+                        '</br>' +
+                        '1788 El Prado, San Diego, CA 92101';
+    var infoWindow = new google.maps.InfoWindow({
+      content: contentString
+    });
 
-		// Validate menu existance
-		this.validateMenuExistance = function(menuId) {
-			if (menuId && menuId.length) {
-				if (this.menus[menuId]) {
-					return true;
-				} else {
-					throw new Error('Menu does not exists');
-				}
-			} else {
-				throw new Error('MenuId was not provided');
-			}
+    var marker = new google.maps.Marker({
+      icon: 'http://maps.google.com/mapfiles/ms/icons/purple-dot.png',
+      position: museumLatLong,
+      title: 'San Diego Natural History Museum'
+    });
 
-			return false;
-		};
+    marker.setMap(googleMap);
+    infoWindow.open(googleMap, marker);
+  }
+})();
 
-		// Get the menu object by menu id
-		this.getMenu = function(menuId) {
-			// Validate that the menu exists
-			this.validateMenuExistance(menuId);
+(function() {
+  'use strict';
 
-			// Return the menu object
-			return this.menus[menuId];
-		};
+  angular
+    .module('core')
+    .directive('mbNavScroll', ['$window', 'home', navScroll]);
 
-		// Add new menu object by menu id
-		this.addMenu = function(menuId, isPublic, roles) {
-			// Create the new menu
-			this.menus[menuId] = {
-				isPublic: isPublic || false,
-				roles: roles || this.defaultRoles,
-				items: [],
-				shouldRender: shouldRender
-			};
+  function navScroll($window, home) {
+    var directive = {
+      restrict: 'A',
+      link: linkFunc
+    };
 
-			// Return the menu object
-			return this.menus[menuId];
-		};
+    return directive;
 
-		// Remove existing menu object by menu id
-		this.removeMenu = function(menuId) {
-			// Validate that the menu exists
-			this.validateMenuExistance(menuId);
+    function linkFunc(scope, el, attrs) {
 
-			// Return the menu object
-			delete this.menus[menuId];
-		};
+      // Dynamically calculates where navigation bar changes height
+      var headerThreshold = $window.innerHeight * parseFloat(attrs.percentage);
+      console.log(headerThreshold);
 
-		// Add menu item object
-		this.addMenuItem = function(menuId, menuItemTitle, menuItemURL, menuItemType, menuItemUIRoute, isPublic, roles, position) {
-			// Validate that the menu exists
-			this.validateMenuExistance(menuId);
+      scope.shouldHaveOverlay = false;
 
-			// Push new menu item
-			this.menus[menuId].items.push({
-				title: menuItemTitle,
-				link: menuItemURL,
-				menuItemType: menuItemType || 'item',
-				menuItemClass: menuItemType,
-				uiRoute: menuItemUIRoute || ('/' + menuItemURL),
-				isPublic: ((isPublic === null || typeof isPublic === 'undefined') ? this.menus[menuId].isPublic : isPublic),
-				roles: ((roles === null || typeof roles === 'undefined') ? this.menus[menuId].roles : roles),
-				position: position || 0,
-				items: [],
-				shouldRender: shouldRender
-			});
+      angular.element($window).bind('scroll', function() {
 
-			// Return the menu object
-			return this.menus[menuId];
-		};
+        if (this.pageYOffset >= headerThreshold)
+          scope.shouldHaveOverlay = true;
+        else
+          scope.shouldHaveOverlay = false;
 
-		// Add submenu item object
-		this.addSubMenuItem = function(menuId, rootMenuItemURL, menuItemTitle, menuItemURL, menuItemUIRoute, isPublic, roles, position) {
-			// Validate that the menu exists
-			this.validateMenuExistance(menuId);
+        scope.$apply();
+      });
+    }
+  }
+})();
 
-			// Search for menu item
-			for (var itemIndex in this.menus[menuId].items) {
-				if (this.menus[menuId].items[itemIndex].link === rootMenuItemURL) {
-					// Push new submenu item
-					this.menus[menuId].items[itemIndex].items.push({
-						title: menuItemTitle,
-						link: menuItemURL,
-						uiRoute: menuItemUIRoute || ('/' + menuItemURL),
-						isPublic: ((isPublic === null || typeof isPublic === 'undefined') ? this.menus[menuId].items[itemIndex].isPublic : isPublic),
-						roles: ((roles === null || typeof roles === 'undefined') ? this.menus[menuId].items[itemIndex].roles : roles),
-						position: position || 0,
-						shouldRender: shouldRender
-					});
-				}
-			}
-
-			// Return the menu object
-			return this.menus[menuId];
-		};
-
-		// Remove existing menu object by menu id
-		this.removeMenuItem = function(menuId, menuItemURL) {
-			// Validate that the menu exists
-			this.validateMenuExistance(menuId);
-
-			// Search for menu item to remove
-			for (var itemIndex in this.menus[menuId].items) {
-				if (this.menus[menuId].items[itemIndex].link === menuItemURL) {
-					this.menus[menuId].items.splice(itemIndex, 1);
-				}
-			}
-
-			// Return the menu object
-			return this.menus[menuId];
-		};
-
-		// Remove existing menu object by menu id
-		this.removeSubMenuItem = function(menuId, submenuItemURL) {
-			// Validate that the menu exists
-			this.validateMenuExistance(menuId);
-
-			// Search for menu item to remove
-			for (var itemIndex in this.menus[menuId].items) {
-				for (var subitemIndex in this.menus[menuId].items[itemIndex].items) {
-					if (this.menus[menuId].items[itemIndex].items[subitemIndex].link === submenuItemURL) {
-						this.menus[menuId].items[itemIndex].items.splice(subitemIndex, 1);
-					}
-				}
-			}
-
-			// Return the menu object
-			return this.menus[menuId];
-		};
-
-		//Adding the topbar menu
-		this.addMenu('topbar');
-	}
-]);
 'use strict';
 
 // Config HTTP Error Handling
