@@ -102,11 +102,11 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 
             var options = {
               offset: 75
-            }
+            };
 
             smoothScroll(element, options);
           });
-        }
+        };
       }]);
 })();
 
