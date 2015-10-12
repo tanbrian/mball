@@ -1,4 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400|Lobster+Two:400italic|Merriweather);
+/* line 1, ../stylesheets/_cloak.scss */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
+
 /* line 4, ../lib/neat/app/assets/stylesheets/grid/_box-sizing.scss */
 html {
   box-sizing: border-box; }
@@ -689,6 +693,64 @@ mb-countdown {
   .breakpoint-info h1:first-child {
     display: inline; }
 
+/* line 59, ../modules/core/scss/_core.scss */
+.view-container {
+  position: relative; }
+
+/* line 63, ../modules/core/scss/_core.scss */
+.view-frame.ng-enter, .view-frame.ng-leave {
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; }
+
+/* line 71, ../modules/core/scss/_core.scss */
+.view-frame.ng-enter {
+  -webkit-animation: 0.1s fade-in;
+  -moz-animation: 0.1s fade-in;
+  -o-animation: 0.1s fade-in;
+  animation: 0.1s fade-in;
+  z-index: 100; }
+
+/* line 79, ../modules/core/scss/_core.scss */
+.view-frame.ng-leave {
+  -webkit-animation: 0.1s fade-out;
+  -moz-animation: 0.1s fade-out;
+  -o-animation: 0.1s fade-out;
+  animation: 0.1s fade-out;
+  z-index: 99; }
+
+@keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-moz-keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes fade-out {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+@-moz-keyframes fade-out {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
 @media (min-width: 992px) {
   /* line 2, ../modules/users/scss/_users.scss */
   .nav-users {

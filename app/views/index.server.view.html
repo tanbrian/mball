@@ -2,6 +2,8 @@
 
 {% block content %}
   <ng-include src="'modules/core/views/partials/navbar.client.view.html'"></ng-include>
-  <div ui-view> </div>
+  <div class="view-container">
+    <div ui-view class="view-frame" autoscroll="true"></div>
+  </div>
   <ng-include src="'modules/core/views/partials/footer.client.view.html'"></ng-include>
 {% endblock %}
