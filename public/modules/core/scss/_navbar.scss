@@ -36,14 +36,17 @@
 
     color: $light-gray;
     font-family: $header-font-family;
-    font-weight: 400;
+    font-weight: 300;
   }
 
 }
 
 .overlay {
   @include simple-transition(.2s);
-  background: linear-gradient(135deg, rgba(180,180,180,0.75) 0%,rgba(180,180,180,0.75) 100%);
+  background-color: lighten($dark-gray, 7%);
 
-  a { color: $white; }
+  a {
+    color: $white;
+    font-weight: 300;
+  }
 }

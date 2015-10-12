@@ -1,4 +1,4 @@
-<div mb-nav-scroll class="navbar" ng-class="{overlay:shouldHaveOverlay}">
+<div mb-nav-scroll percentage="0.25" class="navbar" ng-class="{overlay:shouldHaveOverlay}">
   <div class="container">
     <div class="logo">
     </div>
@@ -6,13 +6,16 @@
     <div class="nav-list">
       <ul>
         <li>
-          <a href="/#!">ABOUT</a>
+          <a href="#" scroll-to="news" offset="80">NEWS</a>
         </li>
         <li>
-          <a href="#">NEWS</a>
+          <a href="#" scroll-to="about">ABOUT</a>
         </li>
         <li>
-          <a href="#">DIRECTIONS</a>
+          <a href="#" scroll-to="directions">DIRECTIONS</a>
+        </li>
+        <li>
+          <a href="/#!" scroll-to="sponsors">SPONSORS</a>
         </li>
         <li>
           <a href="/#!/faq">FAQ</a>

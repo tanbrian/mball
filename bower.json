@@ -9,6 +9,7 @@
     "angular-mocks": "~1.2",
     "angular-resource": "~1.2",
     "angular-sanitize": "~1.2",
+    "angular-smooth-scroll": "ngSmoothScroll#~1.7.1",
     "angular-touch": "~1.2",
     "angular-ui-router": "~0.2.11",
     "angular-ui-utils": "~0.1.1",

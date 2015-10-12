@@ -4,7 +4,7 @@
 var ApplicationConfiguration = (function() {
   // Init module configuration options
   var applicationModuleName = 'mball';
-  var applicationModuleVendorDependencies = ['ngResource', 'ngCookies',  'ngAnimate',  'ngTouch',  'ngSanitize',  'ui.router', 'ui.utils'];
+  var applicationModuleVendorDependencies = ['ngResource', 'ngCookies',  'ngAnimate',  'ngTouch',  'ngSanitize', 'ui.router', 'ui.utils', 'smoothScroll'];
 
   // Add a new vertical module
   var registerModule = function(moduleName, dependencies) {

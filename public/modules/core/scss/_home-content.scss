@@ -134,9 +134,27 @@
 
   h4 { padding: 0; }
 
-  .description-row { @include pad(0 default default default); }
-
   span { color: lighten($purple, 20%); }
+
+  .description-row {
+    @include pad(0 default default default);
+
+    p {
+      @include span-columns(5);
+      font-size: .8em;
+      line-height: 1.8;
+
+      &:first-child { @include shift(1); }
+    }
+
+    a {
+      @include simple-transition(.2s);
+      color: lighten($purple, 5%);
+      text-decoration: none;
+
+      &:hover { color: darken($purple, 20%); }
+    }
+  }
 }
 
 // Section containing logos of sponsors

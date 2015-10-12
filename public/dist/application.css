@@ -75,7 +75,7 @@ p {
 
 /* line 54, ../stylesheets/_base.scss */
 a {
-  color: #55477c;
+  color: #60508c;
   text-decoration: none; }
   /* line 58, ../stylesheets/_base.scss */
   a:hover {
@@ -143,7 +143,7 @@ a {
     transition: 0.2s;
     color: #f3f3f3;
     font-family: "Lato", sans-serif;
-    font-weight: 400; }
+    font-weight: 300; }
 
 /* line 44, ../modules/core/scss/_navbar.scss */
 .overlay {
@@ -152,10 +152,11 @@ a {
   -moz-transition: 0.2s;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  background: linear-gradient(135deg, rgba(180, 180, 180, 0.75) 0%, rgba(180, 180, 180, 0.75) 100%); }
+  background-color: #363636; }
   /* line 48, ../modules/core/scss/_navbar.scss */
   .overlay a {
-    color: #fff; }
+    color: #fff;
+    font-weight: 300; }
 
 /* line 3, ../modules/core/scss/_landing.scss */
 .landing-image {
@@ -380,20 +381,46 @@ mb-countdown {
   .directions-view h4 {
     padding: 0; }
   /* line 137, ../modules/core/scss/_home-content.scss */
-  .directions-view .description-row {
-    padding: 0 2.35765% 2.35765% 2.35765%; }
-  /* line 139, ../modules/core/scss/_home-content.scss */
   .directions-view span {
     color: #8778b1; }
+  /* line 139, ../modules/core/scss/_home-content.scss */
+  .directions-view .description-row {
+    padding: 0 2.35765% 2.35765% 2.35765%; }
+    /* line 142, ../modules/core/scss/_home-content.scss */
+    .directions-view .description-row p {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 40.29137%;
+      font-size: .8em;
+      line-height: 1.8; }
+      /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
+      .directions-view .description-row p:last-child {
+        margin-right: 0; }
+      /* line 147, ../modules/core/scss/_home-content.scss */
+      .directions-view .description-row p:first-child {
+        margin-left: 8.5298%; }
+    /* line 150, ../modules/core/scss/_home-content.scss */
+    .directions-view .description-row a {
+      -o-transition: 0.2s;
+      -ms-transition: 0.2s;
+      -moz-transition: 0.2s;
+      -webkit-transition: 0.2s;
+      transition: 0.2s;
+      color: #60508c;
+      text-decoration: none; }
+      /* line 155, ../modules/core/scss/_home-content.scss */
+      .directions-view .description-row a:hover {
+        color: #29223b; }
 
-/* line 144, ../modules/core/scss/_home-content.scss */
+/* line 162, ../modules/core/scss/_home-content.scss */
 .sponsors-view {
   width: 100%;
   background-color: #f3f3f3; }
-  /* line 148, ../modules/core/scss/_home-content.scss */
+  /* line 166, ../modules/core/scss/_home-content.scss */
   .sponsors-view .slanted-header {
     margin-bottom: 6vh; }
-  /* line 150, ../modules/core/scss/_home-content.scss */
+  /* line 168, ../modules/core/scss/_home-content.scss */
   .sponsors-view img {
     float: left;
     display: block;
@@ -403,13 +430,13 @@ mb-countdown {
     /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
     .sponsors-view img:last-child {
       margin-right: 0; }
-  /* line 155, ../modules/core/scss/_home-content.scss */
+  /* line 173, ../modules/core/scss/_home-content.scss */
   .sponsors-view .separator {
     background-color: #313131;
     height: 50px;
     margin-top: 7vh;
     position: relative; }
-    /* line 161, ../modules/core/scss/_home-content.scss */
+    /* line 179, ../modules/core/scss/_home-content.scss */
     .sponsors-view .separator:before {
       content: '';
       position: absolute;
@@ -423,19 +450,19 @@ mb-countdown {
       border-width: 0 0 5vh 100vw;
       border-color: transparent transparent #313131 transparent; }
 
-/* line 172, ../modules/core/scss/_home-content.scss */
+/* line 190, ../modules/core/scss/_home-content.scss */
 .sign-off {
   background: linear-gradient(135deg, #55477c 0%, rgba(85, 71, 124, 0.6) 100%), url("/modules/core/img/group.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 400px; }
-  /* line 179, ../modules/core/scss/_home-content.scss */
+  /* line 197, ../modules/core/scss/_home-content.scss */
   .sign-off h1 {
     padding: 2.35765%;
     color: #fff;
     height: 100px;
     letter-spacing: .2em;
     text-align: center; }
-  /* line 190, ../modules/core/scss/_home-content.scss */
+  /* line 208, ../modules/core/scss/_home-content.scss */
   .sign-off .links {
     float: left;
     display: block;
@@ -446,7 +473,7 @@ mb-countdown {
     /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
     .sign-off .links:last-child {
       margin-right: 0; }
-    /* line 196, ../modules/core/scss/_home-content.scss */
+    /* line 214, ../modules/core/scss/_home-content.scss */
     .sign-off .links div {
       float: left;
       display: block;
@@ -457,7 +484,7 @@ mb-countdown {
       /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
       .sign-off .links div:last-child {
         margin-right: 0; }
-  /* line 204, ../modules/core/scss/_home-content.scss */
+  /* line 222, ../modules/core/scss/_home-content.scss */
   .sign-off a {
     -o-transition: 0.2s;
     -ms-transition: 0.2s;
@@ -468,7 +495,7 @@ mb-countdown {
     color: #fff;
     font-family: "Lato", sans-serif;
     padding: 7px; }
-    /* line 214, ../modules/core/scss/_home-content.scss */
+    /* line 232, ../modules/core/scss/_home-content.scss */
     .sign-off a:hover {
       border-color: #fdc070;
       color: #fdc070; }
@@ -536,9 +563,39 @@ mb-countdown {
 /* line 46, ../modules/core/scss/_faq.scss */
 .faq-content {
   background-color: #f3f3f3;
-  padding-top: 50px;
   padding-bottom: 100px; }
-  /* line 55, ../modules/core/scss/_faq.scss */
+  /* line 52, ../modules/core/scss/_faq.scss */
+  .faq-content h3:first-child {
+    padding-top: 50px; }
+  /* line 53, ../modules/core/scss/_faq.scss */
+  .faq-content h3:not(:first-child) {
+    margin-top: 50px; }
+  /* line 56, ../modules/core/scss/_faq.scss */
+  .faq-content img {
+    margin-bottom: 50px; }
+  /* line 58, ../modules/core/scss/_faq.scss */
+  .faq-content .lists-container {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 20, ../lib/bourbon/app/assets/stylesheets/addons/_clearfix.scss */
+    .faq-content .lists-container::after {
+      clear: both;
+      content: "";
+      display: table; }
+    /* line 61, ../modules/core/scss/_faq.scss */
+    .faq-content .lists-container ul {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
+      .faq-content .lists-container ul:last-child {
+        margin-right: 0; }
+  /* line 64, ../modules/core/scss/_faq.scss */
+  .faq-content .question {
+    clear: both; }
+  /* line 65, ../modules/core/scss/_faq.scss */
   .faq-content .view {
     float: left;
     display: block;
@@ -547,7 +604,7 @@ mb-countdown {
     /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
     .faq-content .view:last-child {
       margin-right: 0; }
-  /* line 56, ../modules/core/scss/_faq.scss */
+  /* line 66, ../modules/core/scss/_faq.scss */
   .faq-content .description {
     float: left;
     display: block;
@@ -556,6 +613,9 @@ mb-countdown {
     /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
     .faq-content .description:last-child {
       margin-right: 0; }
+  /* line 68, ../modules/core/scss/_faq.scss */
+  .faq-content ul li {
+    list-style-type: none; }
 
 /* line 1, ../modules/core/scss/_footer.scss */
 .footer {

@@ -16,8 +16,8 @@
     function linkFunc(scope, el, attrs) {
 
       // Dynamically calculates where navigation bar changes height
-      var landingHeight = $window.innerHeight * home.landingPercentage;
-      var headerThreshold = landingHeight - (home.navigationBarHeight * 2);
+      var headerThreshold = $window.innerHeight * parseFloat(attrs.percentage);
+      console.log(headerThreshold);
 
       scope.shouldHaveOverlay = false;
 
