@@ -422,11 +422,11 @@ mb-countdown {
       -moz-transition: 0.2s;
       -webkit-transition: 0.2s;
       transition: 0.2s;
-      color: #60508c;
+      color: #8778b1;
       text-decoration: none; }
       /* line 151, ../modules/core/scss/_home-content.scss */
       .directions-view .description-row a:hover {
-        color: #29223b; }
+        color: #55477c; }
 
 /* line 158, ../modules/core/scss/_home-content.scss */
 .sponsors-view {

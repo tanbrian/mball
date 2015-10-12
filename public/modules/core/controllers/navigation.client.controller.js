@@ -17,10 +17,10 @@
 
             var options = {
               offset: 75
-            }
+            };
 
             smoothScroll(element, options);
           });
-        }
+        };
       }]);
 })();
