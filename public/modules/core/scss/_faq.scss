@@ -68,4 +68,8 @@
   .description { @include span-columns(8); }
 
   ul li { list-style-type: none; }
+
+  @include media($tablet) {
+    @include pad();
+  }
 }

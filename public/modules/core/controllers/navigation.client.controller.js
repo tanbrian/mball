@@ -7,7 +7,6 @@
     angular
       .module('core')
       .controller('NavigationController', ['$scope', '$location', '$rootScope', 'smoothScroll', function($scope, $location, $rootScope, smoothScroll) {
-        $scope.test = 'value';
 
         $scope.scrollOrLoad = function(scrollDestId) {
           $location.path('/#!');

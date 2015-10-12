@@ -131,14 +131,15 @@ a {
     justify-content: flex-end;
     height: 75px;
     margin: 0 auto;
-    list-style: none; }
-    /* line 29, ../modules/core/scss/_navbar.scss */
+    list-style: none;
+    padding-right: 10px; }
+    /* line 30, ../modules/core/scss/_navbar.scss */
     .navbar ul li {
       padding-left: 10px; }
-    /* line 31, ../modules/core/scss/_navbar.scss */
+    /* line 32, ../modules/core/scss/_navbar.scss */
     .navbar ul a:hover {
       color: #a498c4; }
-  /* line 34, ../modules/core/scss/_navbar.scss */
+  /* line 35, ../modules/core/scss/_navbar.scss */
   .navbar a {
     -o-transition: 0.2s;
     -ms-transition: 0.2s;
@@ -149,7 +150,7 @@ a {
     font-family: "Lato", sans-serif;
     font-weight: 300; }
 
-/* line 44, ../modules/core/scss/_navbar.scss */
+/* line 45, ../modules/core/scss/_navbar.scss */
 .overlay {
   -o-transition: 0.2s;
   -ms-transition: 0.2s;
@@ -157,11 +158,25 @@ a {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   background-color: #363636; }
-  /* line 48, ../modules/core/scss/_navbar.scss */
+  /* line 49, ../modules/core/scss/_navbar.scss */
   .overlay a {
     color: #fff;
     font-weight: 300; }
 
+@media screen and (max-width: 768px) {
+  /* line 58, ../modules/core/scss/_navbar.scss */
+  .navbar .mobile-hide,
+  .navbar .logo {
+    display: none; }
+  /* line 60, ../modules/core/scss/_navbar.scss */
+  .navbar .nav-list {
+    width: 100vw; }
+  /* line 62, ../modules/core/scss/_navbar.scss */
+  .navbar ul {
+    padding-left: 0; }
+  /* line 65, ../modules/core/scss/_navbar.scss */
+  .navbar li:last-child {
+    padding-right: 5px; } }
 /* line 3, ../modules/core/scss/_landing.scss */
 .landing-image {
   background: linear-gradient(135deg, #55477c 0%, rgba(85, 71, 124, 0.6) 100%), url("/modules/core/img/mask-noir.jpg") no-repeat center center fixed;
@@ -649,6 +664,10 @@ mb-countdown {
   /* line 70, ../modules/core/scss/_faq.scss */
   .faq-content ul li {
     list-style-type: none; }
+  @media screen and (max-width: 768px) {
+    /* line 48, ../modules/core/scss/_faq.scss */
+    .faq-content {
+      padding: 2.35765%; } }
 
 /* line 1, ../modules/core/scss/_footer.scss */
 .footer {
