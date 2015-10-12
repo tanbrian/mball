@@ -1,7 +1,12 @@
-@import 'variables';
+@import 'cloak';
 
-@import '../lib/bootstrap-sass/assets/stylesheets/bootstrap-sprockets';
-@import '../lib/bootstrap-sass/assets/stylesheets/bootstrap';
+@import '../lib/bourbon/app/assets/stylesheets/bourbon';
+@import 'grid-settings';
+@import '../lib/neat/app/assets/stylesheets/neat';
+
+@import 'variables';
+@import 'mixins';
+@import 'base';
 
 @import '../modules/core/scss/core';
 @import '../modules/users/scss/users';

@@ -5,8 +5,8 @@ module.exports = {
   assets: {
     lib: {
       scss: [
-        'public/lib/bootstrap-sass/assets/stylesheets/_bootstrap.scss',
-        'public/lib/bootstrap-sass/assets/stylesheets/_bootstrap-sprockets.scss'
+        'public/lib/bourbon/app/assets/stylesheets/_bourbon.scss',
+        'public/lib/neat/app/assets/stylesheets/_neat.scss'
       ],
       js: [
         'public/lib/angular/angular.min.js',
@@ -17,7 +17,8 @@ module.exports = {
         'public/lib/angular-sanitize/angular-sanitize.js',
         'public/lib/angular-ui-router/release/angular-ui-router.min.js',
         'public/lib/angular-ui-utils/ui-utils.min.js',
-        'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js'
+        'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js',
+        'public/lib/angular-smooth-scroll/angular-smooth-scroll.min.js'
       ]
     },
     css: 'public/dist/application.min.css',

@@ -1,0 +1,30 @@
+<div mb-nav-scroll percentage="0.25" class="navbar" ng-class="{overlay:shouldHaveOverlay}" ng-controller="NavigationController as nav">
+  <div class="container">
+    <div class="logo">
+    </div>
+
+    <div class="nav-list">
+      <ul>
+        <li>
+          <a ui-sref="home">HOME</a>
+        </li>
+        <li>
+          <a href ng-click="scrollOrLoad('news')">NEWS</a>
+        </li>
+        <li>
+          <a href ng-click="scrollOrLoad('about')">ABOUT</a>
+        </li>
+        <li>
+          <a href ng-click="scrollOrLoad('map')">DIRECTIONS</a>
+        </li>
+        <li>
+          <a href ng-click="scrollOrLoad('sponsors')">SPONSORS</a>
+        </li>
+        <li>
+          <a ui-sref="faq">FAQ</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>

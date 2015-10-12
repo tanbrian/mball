@@ -1,0 +1,49 @@
+// Mixins for global use.
+
+@mixin triangle-divide($top-offset, $bottom-offset,
+                       $top-width, $right-width, $bottom-width, $left-width,
+                       $right-color, $left-color) {
+  content: '';
+  position: absolute;
+
+  top: $top-offset;
+  bottom: $bottom-offset;
+  width: 0;
+  height: 0;
+
+  border-style: solid;
+  border-width: $top-width $right-width $bottom-width $left-width;
+  border-color: transparent $right-color transparent $left-color;
+}
+
+@mixin display-flex() {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-align-items($position) {
+  -ms-align-items: $position;
+  -webkit-align-items: $position;
+  align-items: $position;
+}
+
+@mixin flex-justify-content($direction) {
+  -ms-justify-content: $direction;
+  -webkit-justify-content: $direction;
+  justify-content: $direction;
+}
+
+@mixin flex-direction($direction) {
+  -ms-flex-direction: $direction;
+  -webkit-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+@mixin simple-transition($seconds) {
+  -o-transition: $seconds;
+  -ms-transition: $seconds;
+  -moz-transition: $seconds;
+  -webkit-transition: $seconds;
+  transition: $seconds;
+}

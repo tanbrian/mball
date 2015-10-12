@@ -1,0 +1,34 @@
+.footer {
+  background-color: $dark-gray;
+
+  .container {
+    padding-top: 10px;
+  }
+
+  .footer-section {
+    @include span-columns(4);
+
+    text-align: center;
+  }
+
+  h5 {
+    font-family: $header-font-family;
+    font-weight: 300;
+    color: $light-gray;
+    letter-spacing: .1em;
+
+    &:first-child {
+      border-bottom: 1px solid $light-gray;
+      padding-bottom: 10px;
+    }
+    &:not(:first-child) {
+      padding-bottom: 0;
+    }
+  }
+
+  small {
+    font-family: $header-font-family;
+    font-weight: 300;
+    color: darken($light-gray, 20%);
+  }
+}

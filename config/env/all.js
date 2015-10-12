@@ -13,8 +13,8 @@ module.exports = {
   assets: {
     lib: {
       scss: [
-        'public/lib/bootstrap-sass/assets/stylesheets/_bootstrap.scss',
-        'public/lib/bootstrap-sass/assets/stylesheets/_bootstrap-sprockets.scss'
+        'public/lib/bourbon/app/assets/stylesheets/_bourbon.scss',
+        'public/lib/neat/app/assets/stylesheets/_neat.scss'
       ],
       js: [
         'public/lib/angular/angular.js',
@@ -25,7 +25,8 @@ module.exports = {
         'public/lib/angular-sanitize/angular-sanitize.js',
         'public/lib/angular-ui-router/release/angular-ui-router.js',
         'public/lib/angular-ui-utils/ui-utils.js',
-        'public/lib/angular-bootstrap/ui-bootstrap-tpls.js'
+        'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
+        'public/lib/angular-smooth-scroll/angular-smooth-scroll.js'
       ]
     },
     css: [

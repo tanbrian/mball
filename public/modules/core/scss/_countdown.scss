@@ -1,0 +1,40 @@
+// Countdown below landing presentation
+
+.countdown-container {
+  background-color: $light-gray;
+  height: 20vh;
+
+  position: relative;   // relative to countdown div
+
+  h1 {
+    letter-spacing: .2em;
+    text-align: center;
+  }
+
+  &:before { @include triangle-divide(-7vh, auto, 7vh, 0, 0, 100vw, transparent, $light-gray); }
+  &:after { @include triangle-divide(auto, -7vh, 0, 100vw, 7vh, 0, $light-gray, transparent); }
+}
+
+mb-countdown {
+  @include fill-parent;
+
+  .time-value {
+    @include span-columns(3);
+
+    height: 60px;
+
+    h1 {
+      color: $purple;
+      float: left;
+      font-size: 3em;
+      letter-spacing: normal;
+      margin-right: 15px;
+    }
+
+    h3 {
+      color: $light-emphasis;
+      font-family: $serif;
+      line-height: 60px;
+    }
+  }
+}

@@ -1,1 +1,22 @@
-$brand-primary: black;
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400|Lobster+Two:400italic|Merriweather);
+
+// Colors
+
+$white: #fff;
+$yellow: #fdc070;
+$purple: #55477c;
+$light-gray: #f3f3f3;
+$medium-gray: #b4b4b4;
+$dark-gray: #242424;
+$light-emphasis: $medium-gray;
+
+// Typography
+
+$display: 'Lobster Two', cursive;
+$header: 'Lato', sans-serif;
+$serif: 'Merriweather', serif;
+
+$header-font-family: $header;
+$base-font-family: $serif;
+$base-font-size: 1em;
+$base-font-color: $dark-gray;

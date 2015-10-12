@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     serverJS: ['gruntfile.js', 'server.js', 'config/**/*.js', 'app/**/*.js'],
     clientViews: ['public/modules/**/views/**/*.html'],
     clientJS: ['public/js/*.js', 'public/modules/**/*.js'],
-    clientSCSS: ['public/stylesheets/main.scss', 'public/modules/**/*.scss'],
+    clientSCSS: ['public/stylesheets/*.scss', 'public/modules/**/*.scss'],
     mochaTests: ['app/tests/**/*.js']
   };
 
@@ -60,7 +60,8 @@ module.exports = function(grunt) {
     scsslint: {
       allFiles: watchFiles.clientSCSS,
       options: {
-        colorizeOutput: true
+        colorizeOutput: true,
+        exclude: ['public/stylesheets/_cloak.scss', 'public/stylesheets/_mixins.scss']
       }
     },
     uglify: {
@@ -88,7 +89,7 @@ module.exports = function(grunt) {
       },
       dist: {
         options: {
-          style: 'compressed',
+          style: 'compressed'
         },
         files: {
           'public/dist/application.min.css' : 'public/dist/application.css'

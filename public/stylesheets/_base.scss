@@ -1,0 +1,59 @@
+// Container
+
+body {
+  background-color: $dark-gray;
+
+  margin: 0;  // for divs to reach full width of viewport
+}
+
+.container {
+  @include outer-container;
+}
+
+// Typography
+
+h1,
+h2,
+h3,
+h4 {
+  color: $base-font-color;
+  font-family: $header-font-family;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 300;
+}
+
+h3,
+h4 {
+  font-weight: normal;
+}
+
+h4 {
+  color: $base-font-color;
+  font-family: $base-font-family;
+}
+
+p {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: .8em;
+  line-height: 1.8;
+}
+
+// Miscellaneous
+
+.light-emphasis { color: $light-emphasis; }
+.emphasis { color: $purple; }
+.yellow { color: darken($yellow, 10%); }
+
+.left { float: left; }
+.right { float: right; }
+
+a {
+  color: lighten($purple, 20%);
+  text-decoration: none;
+
+  &:hover { color: $purple }
+}

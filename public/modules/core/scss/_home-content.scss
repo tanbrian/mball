@@ -1,0 +1,233 @@
+// Header section
+
+.view-header {
+  width: 30vw;
+
+  .content { padding-top: 100px; }
+
+  h1,
+  p {
+    color: $white;
+    text-align: center;
+  }
+
+  h1 {
+    letter-spacing: .2em;
+    margin-top: 10px;
+  }
+
+  p {
+    color: $light-gray;
+    margin-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+// Contains announcements content
+
+.view-content {
+  @include pad(100px default default default);
+
+  width: 70vw;
+
+  h3 { color: darken($light-gray, 5%); }
+  p { color: $white; }
+
+  small { color: $light-gray; }
+
+  .announcement:not(:first-child) { margin-top: 60px; }
+}
+
+.announcements-view,
+.about-view {
+  @include display-flex;    // Keeps child divs equal height
+}
+
+// Section containing announcements
+
+.announcements-view {
+  background-color: $dark-gray;
+
+  width: 100vw;
+
+  .view-header {
+    background: linear-gradient(to bottom, rgba(85, 71, 124, .75) 0%, rgba(85, 71, 124, .75) 100%),
+                url('/modules/core/img/lights.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .view-content { background-color: lighten($dark-gray, 5%); }
+}
+
+.about-view {
+
+  .view-header {
+    background: linear-gradient(to bottom, rgba(253, 192, 112, .75) 0%, rgba(253, 192, 112, .75) 100%),
+                url('/modules/core/img/lights.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .view-content {
+    @include pad(default);
+
+    background-color: $light-gray;
+
+    p { color: lighten($base-font-color, 30%); }
+  }
+}
+
+.image-row,
+.description-row {
+  @include outer-container;
+
+  margin-top: 40px;
+}
+
+.image-row {
+  margin-bottom: 40px;
+
+  .text {
+    @include span-columns(7);
+  }
+
+  img {
+    @include span-columns(5);
+
+    border: 3px solid $yellow;
+    padding: 3px;
+  }
+}
+
+.description-row {
+  p { @include span-columns(4); }
+
+  a {
+    color: darken($yellow, 10%);
+    &:hover { color: $yellow; }
+  }
+}
+
+// Section containing driving info
+
+.directions-view {
+  background-color: lighten($dark-gray, 15%);
+  padding-bottom: 3vh;
+
+  h1,
+  h4,
+  p {
+    color: $white;
+  }
+
+  h1,
+  h4 { text-align: center; }
+
+  h1 {
+    @include pad(default);
+    letter-spacing: .2em;
+  }
+
+  h4 { padding: 0; }
+
+  span { color: lighten($purple, 20%); }
+
+  .description-row {
+    @include pad(0 default default default);
+
+    p {
+      @include span-columns(5);
+      font-size: .8em;
+      line-height: 1.8;
+
+      &:first-child { @include shift(1); }
+    }
+
+    a {
+      @include simple-transition(.2s);
+      color: lighten($purple, 5%);
+      text-decoration: none;
+
+      &:hover { color: darken($purple, 20%); }
+    }
+  }
+}
+
+// Section containing logos of sponsors
+
+.sponsors-view {
+  @include fill-parent;
+  background-color: $light-gray;
+
+  .slanted-header { margin-bottom: 6vh; }
+
+  img {
+    @include span-columns(4);
+    @include pad(5px);
+  }
+
+  .separator {
+    background-color: lighten($dark-gray, 5%);
+    height: 50px;
+    margin-top: 7vh;
+    position: relative;
+
+    &:before {
+      @include triangle-divide(-5vh, auto, 0, 0, 5vh, 100vw, transparent, lighten($dark-gray, 5%));
+      border-width: 0 0 5vh 100vw;
+      border-color: transparent transparent lighten($dark-gray, 5%) transparent;
+    }
+
+  }
+}
+
+// Last section before footer
+
+.sign-off {
+  background: linear-gradient(135deg, rgba(85, 71, 124, 1) 0%, rgba(85, 71, 124, .6) 100%),
+              url('/modules/core/img/group.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+  height: 400px;
+
+  h1 {
+    @include pad(default);
+
+    color: $white;
+
+    height: 100px;
+
+    letter-spacing: .2em;
+    text-align: center;
+  }
+
+  .links {
+    @include span-columns(10);
+    @include shift(1);
+
+    height: 300px;
+
+    div {
+      @include span-columns(5 of 10);
+
+      padding-top: 100px;
+      text-align: center;
+    }
+  }
+
+  a {
+    @include simple-transition(.2s);
+
+    border: 2px solid $white;
+    color: $white;
+
+    font-family: $header-font-family;
+
+    padding: 7px;
+
+    &:hover {
+      border-color: $yellow;
+      color: $yellow;
+    }
+  }
+}

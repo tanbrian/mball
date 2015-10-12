@@ -1,0 +1,69 @@
+.page-header {
+  background: linear-gradient(135deg, rgba(85, 71, 124, 1) 0%, rgba(85, 71, 124, .6) 100%),
+              url('/modules/core/img/mask-noir.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+  height: 300px;
+
+  h1 {
+    color: $light-gray;
+    letter-spacing: .2em;
+  }
+
+  .page-hero {
+    padding-left: 15px;
+    padding-top: 15vh;
+  }
+
+  .title {
+    color: $white;
+    font-family: $display;
+    font-size: 4em;
+    font-style: italic;
+    letter-spacing: normal;
+  }
+}
+
+.slanted-header {
+
+  background-color: lighten($dark-gray, 5%);
+
+  height: 100px;
+
+  position: relative;
+
+  h1 {
+    color: $light-gray;
+    letter-spacing: .2em;
+    line-height: 100px;
+    text-align: center;
+  }
+
+  &:before { @include triangle-divide(-4vh, auto, 4vh, 0, 0, 100vw, transparent, lighten($dark-gray, 5%)); }
+  &:after { @include triangle-divide(auto, -4vh, 0, 100vw, 4vh, 0, lighten($dark-gray, 5%), transparent); }
+}
+
+.faq-content {
+  background-color: $light-gray;
+
+  padding-bottom: 100px;
+
+  h3 {
+    &:first-child { padding-top: 50px; }
+    &:not(:first-child) { margin-top: 50px; }
+  }
+
+  img { margin-bottom: 50px; }
+
+  .lists-container {
+    @include outer-container;
+
+    ul { @include span-columns(6); }
+  }
+
+  .question { clear: both; }
+  .view { @include span-columns(4); }
+  .description { @include span-columns(8); }
+
+  ul li { list-style-type: none; }
+}

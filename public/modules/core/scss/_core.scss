@@ -1,43 +1,111 @@
-//colors
-$color-froly-approx: #fa787e;
-$color-pastel-green-approx: #78fa89;
+// Main navigation bar
+@import 'navbar';
 
-.content {
-  margin-top: 50px;
+// Landing presentation with splash image and titles.
+@import 'landing';
+
+// Countdown on landing page.
+@import 'countdown';
+
+// Rest of home page.
+@import 'home-content';
+
+// Google Map presentation
+@import 'map';
+
+// Styling for FAQ page
+@import 'faq';
+
+@import 'footer';
+
+.breakpoint-info {
+  background: linear-gradient(to bottom, rgba(85, 71, 124, .75) 0%, rgba(85, 71, 124, .75) 100%);
+  border-radius: 3px;
+
+  bottom: 20px;
+
+  color: $white;
+  position: fixed;
+
+  right: 20px;
+
+  z-index: 1;
+
+  @include media($tablet) {
+    h1:first-child,
+    h1:last-child { display: none; }
+
+    h1:nth-child(2) { display: inline; }
+  }
+
+  @include media($mobile) {
+    h1:first-child,
+    h1:nth-child(2) { display: none; }
+
+    h1:last-child { display: inline; }
+  }
+
+  h1 {
+    color: $light-gray;
+    padding: 15px;
+  }
+
+  h1:nth-child(2),
+  h1:last-child { display: none; }
+
+  h1:first-child { display: inline; }
 }
 
-[ng-cloak] {
-  display: none !important;
+.view-container {
+  position: relative;
 }
 
-[data-ng-cloak] {
-  display: none !important;
+.view-frame.ng-enter, .view-frame.ng-leave {
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
-[x-ng-cloak] {
-  display: none !important;
+.view-frame.ng-enter {
+  -webkit-animation: 0.1s fade-in;
+  -moz-animation: 0.1s fade-in;
+  -o-animation: 0.1s fade-in;
+  animation: 0.1s fade-in;
+  z-index: 100;
 }
 
-.ng-cloak {
-  display: none !important;
+.view-frame.ng-leave {
+  -webkit-animation: 0.1s fade-out;
+  -moz-animation: 0.1s fade-out;
+  -o-animation: 0.1s fade-out;
+  animation: 0.1s fade-out;
+  z-index:99;
 }
 
-.x-ng-cloak {
-  display: none !important;
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@-moz-keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@-webkit-keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-.undecorated-link:hover {
-  text-decoration: none;
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
-
-[ng\:cloak] {
-  display: none !important;
+@-moz-keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
-
-.ng-invalid.ng-dirty {
-  border-color: $color_froly_approx;
-}
-
-.ng-valid.ng-dirty {
-  border-color: $color_pastel_green_approx;
+@-webkit-keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }

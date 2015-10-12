@@ -1,0 +1,38 @@
+// Landing presentation
+
+.landing-image {
+  background: linear-gradient(135deg, rgba(85, 71, 124, 1) 0%, rgba(85, 71, 124, .6) 100%),
+              url('/modules/core/img/mask-noir.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+  height: 80vh;
+
+  h1 {
+    color: $light-gray;
+    letter-spacing: .2em;
+  }
+
+  a {
+    border: 1px solid $white;
+    margin-top: 20px;
+  }
+
+  h3 {
+    color: $white;
+    font-family: $base-font-family;
+    font-weight: 300;
+  }
+
+  .title {
+    color: $white;
+    font-family: $display;
+    font-size: 4em;
+    font-style: italic;
+    letter-spacing: normal;
+  }
+}
+
+.landing-hero {
+  padding-left: 15px;
+  padding-top: 25vh;
+}
