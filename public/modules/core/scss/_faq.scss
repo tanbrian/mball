@@ -39,8 +39,10 @@
     text-align: center;
   }
 
-  &:before { @include triangle-divide(-4vh, auto, 4vh, 0, 0, 100vw, transparent, lighten($dark-gray, 5%)); }
-  &:after { @include triangle-divide(auto, -4vh, 0, 100vw, 4vh, 0, lighten($dark-gray, 5%), transparent); }
+  &:before { @include triangle-divide-right(auto, 100%, 4vh, 0, 0, 100vw, transparent, lighten($dark-gray, 5%)); }
+  &:after { @include triangle-divide-right(100%, auto, 0, 100vw, 4vh, 0, lighten($dark-gray, 5%), transparent); }
+
+  @include media($tablet) { display: none; }
 }
 
 .faq-content {
