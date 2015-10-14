@@ -3,7 +3,10 @@
 .view-header {
   width: 30vw;
 
-  .content { padding-top: 100px; }
+  .content {
+    padding-top: 100px;
+    @include media($tablet) { padding-top: 20px; }
+  }
 
   h1,
   p {
@@ -37,6 +40,7 @@
   small { color: $light-gray; }
 
   .announcement:not(:first-child) { margin-top: 60px; }
+  @include media($tablet) { padding-top: 20px; }
 }
 
 .announcements-view,
@@ -82,6 +86,8 @@
   @include outer-container;
 
   margin-top: 40px;
+
+  @include media($tablet) { margin-top: 10px; }
 }
 
 .image-row {
@@ -89,6 +95,8 @@
 
   .text {
     @include span-columns(7);
+
+    @include media($mobile) { @include fill-parent; }
   }
 
   img {
@@ -96,6 +104,10 @@
 
     border: 3px solid $yellow;
     padding: 3px;
+
+    @include media($mobile) {
+      @include fill-parent;
+    }
   }
 }
 

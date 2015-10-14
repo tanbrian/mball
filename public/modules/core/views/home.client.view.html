@@ -6,12 +6,21 @@
 </div>
 -->
 
-<div class="landing-image">
+<div class="landing-image" ng-controller="LandingController as landing">
   <div class="container">
 
     <div class="landing-hero">
       <h1>UCSD CIRCLE K PRESENTS</h1>
       <h1 class="title">Masquerade Ball 2015</h1>
+    </div>
+
+    <div class="landing-links">
+      <div>
+        <a href="http://ucsdcki.ticketleap.com/mball2015/t/fb/" class="link-emphasis"><i class="fa fa-ticket"></i> GET TICKETS</a>
+      </div>
+      <div>
+        <a id="volunteer" ng-click="thank()" href="http://ucsdcki.org/events/masquerade-ball-decoration-workday-3">{{ message }}</a>
+      </div>
     </div>
 
   </div>
