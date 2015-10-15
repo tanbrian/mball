@@ -131,14 +131,15 @@ a {
     justify-content: flex-end;
     height: 75px;
     margin: 0 auto;
-    list-style: none; }
-    /* line 29, ../modules/core/scss/_navbar.scss */
+    list-style: none;
+    padding-right: 10px; }
+    /* line 30, ../modules/core/scss/_navbar.scss */
     .navbar ul li {
       padding-left: 10px; }
-    /* line 31, ../modules/core/scss/_navbar.scss */
+    /* line 32, ../modules/core/scss/_navbar.scss */
     .navbar ul a:hover {
       color: #a498c4; }
-  /* line 34, ../modules/core/scss/_navbar.scss */
+  /* line 35, ../modules/core/scss/_navbar.scss */
   .navbar a {
     -o-transition: 0.2s;
     -ms-transition: 0.2s;
@@ -149,7 +150,7 @@ a {
     font-family: "Lato", sans-serif;
     font-weight: 300; }
 
-/* line 44, ../modules/core/scss/_navbar.scss */
+/* line 45, ../modules/core/scss/_navbar.scss */
 .overlay {
   -o-transition: 0.2s;
   -ms-transition: 0.2s;
@@ -157,11 +158,25 @@ a {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   background-color: #363636; }
-  /* line 48, ../modules/core/scss/_navbar.scss */
+  /* line 49, ../modules/core/scss/_navbar.scss */
   .overlay a {
     color: #fff;
     font-weight: 300; }
 
+@media screen and (max-width: 768px) {
+  /* line 58, ../modules/core/scss/_navbar.scss */
+  .navbar .mobile-hide,
+  .navbar .logo {
+    display: none; }
+  /* line 60, ../modules/core/scss/_navbar.scss */
+  .navbar .nav-list {
+    width: 100vw; }
+  /* line 62, ../modules/core/scss/_navbar.scss */
+  .navbar ul {
+    padding-left: 0; }
+  /* line 65, ../modules/core/scss/_navbar.scss */
+  .navbar li:last-child {
+    padding-right: 5px; } }
 /* line 3, ../modules/core/scss/_landing.scss */
 .landing-image {
   background: linear-gradient(135deg, #55477c 0%, rgba(85, 71, 124, 0.6) 100%), url("/modules/core/img/mask-noir.jpg") no-repeat center center fixed;
@@ -187,11 +202,54 @@ a {
     font-size: 4em;
     font-style: italic;
     letter-spacing: normal; }
+  @media screen and (max-width: 768px) {
+    /* line 3, ../modules/core/scss/_landing.scss */
+    .landing-image {
+      height: 100vh; } }
 
-/* line 35, ../modules/core/scss/_landing.scss */
+/* line 37, ../modules/core/scss/_landing.scss */
 .landing-hero {
   padding-left: 15px;
-  padding-top: 25vh; }
+  padding-top: 20vh; }
+
+/* line 42, ../modules/core/scss/_landing.scss */
+.landing-links {
+  padding-left: 15px;
+  margin-top: 10vh; }
+  /* line 46, ../modules/core/scss/_landing.scss */
+  .landing-links div {
+    display: inline-block;
+    padding-left: 50px; }
+    @media screen and (max-width: 480px) {
+      /* line 46, ../modules/core/scss/_landing.scss */
+      .landing-links div {
+        padding-left: 10px; } }
+  /* line 55, ../modules/core/scss/_landing.scss */
+  .landing-links a {
+    -o-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    color: #f3f3f3;
+    border: 1px solid #f3f3f3;
+    border-radius: 5px;
+    font-family: "Lato", sans-serif;
+    padding: 15px 30px 15px 30px; }
+    /* line 65, ../modules/core/scss/_landing.scss */
+    .landing-links a:hover {
+      border-color: #b4b4b4;
+      color: #b4b4b4; }
+  /* line 71, ../modules/core/scss/_landing.scss */
+  .landing-links .link-emphasis {
+    background-color: #8778b1;
+    border: 1px solid #8778b1;
+    color: #fff; }
+    /* line 76, ../modules/core/scss/_landing.scss */
+    .landing-links .link-emphasis:hover {
+      background-color: #55477c;
+      border-color: #55477c;
+      color: #cccccc; }
 
 /* line 3, ../modules/core/scss/_countdown.scss */
 .countdown-container {
@@ -206,8 +264,8 @@ a {
   .countdown-container:before {
     content: '';
     position: absolute;
-    top: -7vh;
-    bottom: auto;
+    top: auto;
+    bottom: 100%;
     width: 0;
     height: 0;
     border-style: solid;
@@ -217,8 +275,8 @@ a {
   .countdown-container:after {
     content: '';
     position: absolute;
-    top: auto;
-    bottom: -7vh;
+    top: 100%;
+    bottom: auto;
     width: 0;
     height: 0;
     border-style: solid;
@@ -257,71 +315,79 @@ mb-countdown {
   /* line 6, ../modules/core/scss/_home-content.scss */
   .view-header .content {
     padding-top: 100px; }
-  /* line 8, ../modules/core/scss/_home-content.scss */
+    @media screen and (max-width: 768px) {
+      /* line 6, ../modules/core/scss/_home-content.scss */
+      .view-header .content {
+        padding-top: 20px; } }
+  /* line 11, ../modules/core/scss/_home-content.scss */
   .view-header h1,
   .view-header p {
     color: #fff;
     text-align: center; }
-  /* line 14, ../modules/core/scss/_home-content.scss */
+  /* line 17, ../modules/core/scss/_home-content.scss */
   .view-header h1 {
     letter-spacing: .2em;
     margin-top: 10px; }
-  /* line 19, ../modules/core/scss/_home-content.scss */
+  /* line 22, ../modules/core/scss/_home-content.scss */
   .view-header p {
     color: #f3f3f3;
     margin-top: 50px;
     padding-left: 20px;
     padding-right: 20px; }
 
-/* line 29, ../modules/core/scss/_home-content.scss */
+/* line 32, ../modules/core/scss/_home-content.scss */
 .view-content {
   padding: 100px 2.35765% 2.35765% 2.35765%;
   width: 70vw; }
-  /* line 34, ../modules/core/scss/_home-content.scss */
+  /* line 37, ../modules/core/scss/_home-content.scss */
   .view-content h3 {
     color: #e6e6e6; }
-  /* line 35, ../modules/core/scss/_home-content.scss */
+  /* line 38, ../modules/core/scss/_home-content.scss */
   .view-content p {
     color: #fff; }
-  /* line 37, ../modules/core/scss/_home-content.scss */
+  /* line 40, ../modules/core/scss/_home-content.scss */
   .view-content small {
     color: #f3f3f3; }
-  /* line 39, ../modules/core/scss/_home-content.scss */
+  /* line 42, ../modules/core/scss/_home-content.scss */
   .view-content .announcement:not(:first-child) {
     margin-top: 60px; }
+  @media screen and (max-width: 768px) {
+    /* line 32, ../modules/core/scss/_home-content.scss */
+    .view-content {
+      padding-top: 20px; } }
 
-/* line 42, ../modules/core/scss/_home-content.scss */
+/* line 46, ../modules/core/scss/_home-content.scss */
 .announcements-view,
 .about-view {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex; }
 
-/* line 49, ../modules/core/scss/_home-content.scss */
+/* line 53, ../modules/core/scss/_home-content.scss */
 .announcements-view {
   background-color: #242424;
   width: 100vw; }
-  /* line 54, ../modules/core/scss/_home-content.scss */
+  /* line 58, ../modules/core/scss/_home-content.scss */
   .announcements-view .view-header {
     background: linear-gradient(to bottom, rgba(85, 71, 124, 0.75) 0%, rgba(85, 71, 124, 0.75) 100%), url("/modules/core/img/lights.jpg") no-repeat center center fixed;
     background-size: cover; }
-  /* line 60, ../modules/core/scss/_home-content.scss */
+  /* line 64, ../modules/core/scss/_home-content.scss */
   .announcements-view .view-content {
     background-color: #313131; }
 
-/* line 65, ../modules/core/scss/_home-content.scss */
+/* line 69, ../modules/core/scss/_home-content.scss */
 .about-view .view-header {
   background: linear-gradient(to bottom, rgba(253, 192, 112, 0.75) 0%, rgba(253, 192, 112, 0.75) 100%), url("/modules/core/img/lights.jpg") no-repeat center center fixed;
   background-size: cover; }
-/* line 71, ../modules/core/scss/_home-content.scss */
+/* line 75, ../modules/core/scss/_home-content.scss */
 .about-view .view-content {
   padding: 2.35765%;
   background-color: #f3f3f3; }
-  /* line 76, ../modules/core/scss/_home-content.scss */
+  /* line 80, ../modules/core/scss/_home-content.scss */
   .about-view .view-content p {
     color: #717171; }
 
-/* line 80, ../modules/core/scss/_home-content.scss */
+/* line 84, ../modules/core/scss/_home-content.scss */
 .image-row,
 .description-row {
   max-width: 68em;
@@ -334,11 +400,16 @@ mb-countdown {
     clear: both;
     content: "";
     display: table; }
+  @media screen and (max-width: 768px) {
+    /* line 84, ../modules/core/scss/_home-content.scss */
+    .image-row,
+    .description-row {
+      margin-top: 10px; } }
 
-/* line 87, ../modules/core/scss/_home-content.scss */
+/* line 93, ../modules/core/scss/_home-content.scss */
 .image-row {
   margin-bottom: 40px; }
-  /* line 90, ../modules/core/scss/_home-content.scss */
+  /* line 96, ../modules/core/scss/_home-content.scss */
   .image-row .text {
     float: left;
     display: block;
@@ -347,7 +418,11 @@ mb-countdown {
     /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
     .image-row .text:last-child {
       margin-right: 0; }
-  /* line 94, ../modules/core/scss/_home-content.scss */
+    @media screen and (max-width: 480px) {
+      /* line 96, ../modules/core/scss/_home-content.scss */
+      .image-row .text {
+        width: 100%; } }
+  /* line 102, ../modules/core/scss/_home-content.scss */
   .image-row img {
     float: left;
     display: block;
@@ -358,8 +433,12 @@ mb-countdown {
     /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
     .image-row img:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 480px) {
+      /* line 102, ../modules/core/scss/_home-content.scss */
+      .image-row img {
+        width: 100%; } }
 
-/* line 103, ../modules/core/scss/_home-content.scss */
+/* line 115, ../modules/core/scss/_home-content.scss */
 .description-row p {
   float: left;
   display: block;
@@ -368,40 +447,40 @@ mb-countdown {
   /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
   .description-row p:last-child {
     margin-right: 0; }
-/* line 105, ../modules/core/scss/_home-content.scss */
+/* line 117, ../modules/core/scss/_home-content.scss */
 .description-row a {
   color: #fcaa3e; }
-  /* line 107, ../modules/core/scss/_home-content.scss */
+  /* line 119, ../modules/core/scss/_home-content.scss */
   .description-row a:hover {
     color: #fdc070; }
 
-/* line 113, ../modules/core/scss/_home-content.scss */
+/* line 125, ../modules/core/scss/_home-content.scss */
 .directions-view {
   background-color: #4a4a4a;
   padding-bottom: 3vh; }
-  /* line 117, ../modules/core/scss/_home-content.scss */
+  /* line 129, ../modules/core/scss/_home-content.scss */
   .directions-view h1,
   .directions-view h4,
   .directions-view p {
     color: #fff; }
-  /* line 123, ../modules/core/scss/_home-content.scss */
+  /* line 135, ../modules/core/scss/_home-content.scss */
   .directions-view h1,
   .directions-view h4 {
     text-align: center; }
-  /* line 126, ../modules/core/scss/_home-content.scss */
+  /* line 138, ../modules/core/scss/_home-content.scss */
   .directions-view h1 {
     padding: 2.35765%;
     letter-spacing: .2em; }
-  /* line 131, ../modules/core/scss/_home-content.scss */
+  /* line 143, ../modules/core/scss/_home-content.scss */
   .directions-view h4 {
     padding: 0; }
-  /* line 133, ../modules/core/scss/_home-content.scss */
+  /* line 145, ../modules/core/scss/_home-content.scss */
   .directions-view span {
     color: #8778b1; }
-  /* line 135, ../modules/core/scss/_home-content.scss */
+  /* line 147, ../modules/core/scss/_home-content.scss */
   .directions-view .description-row {
     padding: 0 2.35765% 2.35765% 2.35765%; }
-    /* line 138, ../modules/core/scss/_home-content.scss */
+    /* line 150, ../modules/core/scss/_home-content.scss */
     .directions-view .description-row p {
       float: left;
       display: block;
@@ -412,30 +491,30 @@ mb-countdown {
       /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
       .directions-view .description-row p:last-child {
         margin-right: 0; }
-      /* line 143, ../modules/core/scss/_home-content.scss */
+      /* line 155, ../modules/core/scss/_home-content.scss */
       .directions-view .description-row p:first-child {
         margin-left: 8.5298%; }
-    /* line 146, ../modules/core/scss/_home-content.scss */
+    /* line 158, ../modules/core/scss/_home-content.scss */
     .directions-view .description-row a {
       -o-transition: 0.2s;
       -ms-transition: 0.2s;
       -moz-transition: 0.2s;
       -webkit-transition: 0.2s;
       transition: 0.2s;
-      color: #60508c;
+      color: #8778b1;
       text-decoration: none; }
-      /* line 151, ../modules/core/scss/_home-content.scss */
+      /* line 163, ../modules/core/scss/_home-content.scss */
       .directions-view .description-row a:hover {
-        color: #29223b; }
+        color: #55477c; }
 
-/* line 158, ../modules/core/scss/_home-content.scss */
+/* line 170, ../modules/core/scss/_home-content.scss */
 .sponsors-view {
   width: 100%;
   background-color: #f3f3f3; }
-  /* line 162, ../modules/core/scss/_home-content.scss */
+  /* line 174, ../modules/core/scss/_home-content.scss */
   .sponsors-view .slanted-header {
     margin-bottom: 6vh; }
-  /* line 164, ../modules/core/scss/_home-content.scss */
+  /* line 176, ../modules/core/scss/_home-content.scss */
   .sponsors-view img {
     float: left;
     display: block;
@@ -445,39 +524,37 @@ mb-countdown {
     /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
     .sponsors-view img:last-child {
       margin-right: 0; }
-  /* line 169, ../modules/core/scss/_home-content.scss */
+  /* line 181, ../modules/core/scss/_home-content.scss */
   .sponsors-view .separator {
     background-color: #313131;
     height: 50px;
     margin-top: 7vh;
     position: relative; }
-    /* line 175, ../modules/core/scss/_home-content.scss */
+    /* line 187, ../modules/core/scss/_home-content.scss */
     .sponsors-view .separator:before {
       content: '';
       position: absolute;
-      top: -5vh;
-      bottom: auto;
+      top: auto;
+      bottom: 100%;
       width: 0;
       height: 0;
       border-style: solid;
       border-width: 0 0 5vh 100vw;
-      border-color: transparent transparent transparent #313131;
-      border-width: 0 0 5vh 100vw;
       border-color: transparent transparent #313131 transparent; }
 
-/* line 186, ../modules/core/scss/_home-content.scss */
+/* line 193, ../modules/core/scss/_home-content.scss */
 .sign-off {
   background: linear-gradient(135deg, #55477c 0%, rgba(85, 71, 124, 0.6) 100%), url("/modules/core/img/group.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 400px; }
-  /* line 193, ../modules/core/scss/_home-content.scss */
+  /* line 200, ../modules/core/scss/_home-content.scss */
   .sign-off h1 {
     padding: 2.35765%;
     color: #fff;
     height: 100px;
     letter-spacing: .2em;
     text-align: center; }
-  /* line 204, ../modules/core/scss/_home-content.scss */
+  /* line 211, ../modules/core/scss/_home-content.scss */
   .sign-off .links {
     float: left;
     display: block;
@@ -488,7 +565,7 @@ mb-countdown {
     /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
     .sign-off .links:last-child {
       margin-right: 0; }
-    /* line 210, ../modules/core/scss/_home-content.scss */
+    /* line 217, ../modules/core/scss/_home-content.scss */
     .sign-off .links div {
       float: left;
       display: block;
@@ -499,7 +576,7 @@ mb-countdown {
       /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
       .sign-off .links div:last-child {
         margin-right: 0; }
-  /* line 218, ../modules/core/scss/_home-content.scss */
+  /* line 225, ../modules/core/scss/_home-content.scss */
   .sign-off a {
     -o-transition: 0.2s;
     -ms-transition: 0.2s;
@@ -510,11 +587,27 @@ mb-countdown {
     color: #fff;
     font-family: "Lato", sans-serif;
     padding: 7px; }
-    /* line 228, ../modules/core/scss/_home-content.scss */
+    /* line 235, ../modules/core/scss/_home-content.scss */
     .sign-off a:hover {
       border-color: #fdc070;
       color: #fdc070; }
+  @media screen and (max-width: 768px) {
+    /* line 193, ../modules/core/scss/_home-content.scss */
+    .sign-off {
+      display: none; } }
 
+@media screen and (max-width: 768px) {
+  /* line 247, ../modules/core/scss/_home-content.scss */
+  .view-header {
+    display: none; }
+
+  /* line 248, ../modules/core/scss/_home-content.scss */
+  .countdown-container {
+    display: none; }
+
+  /* line 249, ../modules/core/scss/_home-content.scss */
+  .view-content {
+    width: 100vw; } }
 /* line 2, ../modules/core/scss/_map.scss */
 #map {
   height: 500px;
@@ -556,8 +649,8 @@ mb-countdown {
   .slanted-header:before {
     content: '';
     position: absolute;
-    top: -4vh;
-    bottom: auto;
+    top: auto;
+    bottom: 100%;
     width: 0;
     height: 0;
     border-style: solid;
@@ -567,28 +660,32 @@ mb-countdown {
   .slanted-header:after {
     content: '';
     position: absolute;
-    top: auto;
-    bottom: -4vh;
+    top: 100%;
+    bottom: auto;
     width: 0;
     height: 0;
     border-style: solid;
     border-width: 0 100vw 4vh 0;
     border-color: transparent #313131 transparent transparent; }
+  @media screen and (max-width: 768px) {
+    /* line 27, ../modules/core/scss/_faq.scss */
+    .slanted-header {
+      display: none; } }
 
-/* line 46, ../modules/core/scss/_faq.scss */
+/* line 48, ../modules/core/scss/_faq.scss */
 .faq-content {
   background-color: #f3f3f3;
   padding-bottom: 100px; }
-  /* line 52, ../modules/core/scss/_faq.scss */
+  /* line 54, ../modules/core/scss/_faq.scss */
   .faq-content h3:first-child {
     padding-top: 50px; }
-  /* line 53, ../modules/core/scss/_faq.scss */
+  /* line 55, ../modules/core/scss/_faq.scss */
   .faq-content h3:not(:first-child) {
     margin-top: 50px; }
-  /* line 56, ../modules/core/scss/_faq.scss */
+  /* line 58, ../modules/core/scss/_faq.scss */
   .faq-content img {
     margin-bottom: 50px; }
-  /* line 58, ../modules/core/scss/_faq.scss */
+  /* line 60, ../modules/core/scss/_faq.scss */
   .faq-content .lists-container {
     max-width: 68em;
     margin-left: auto;
@@ -598,7 +695,7 @@ mb-countdown {
       clear: both;
       content: "";
       display: table; }
-    /* line 61, ../modules/core/scss/_faq.scss */
+    /* line 63, ../modules/core/scss/_faq.scss */
     .faq-content .lists-container ul {
       float: left;
       display: block;
@@ -607,10 +704,10 @@ mb-countdown {
       /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
       .faq-content .lists-container ul:last-child {
         margin-right: 0; }
-  /* line 64, ../modules/core/scss/_faq.scss */
+  /* line 66, ../modules/core/scss/_faq.scss */
   .faq-content .question {
     clear: both; }
-  /* line 65, ../modules/core/scss/_faq.scss */
+  /* line 67, ../modules/core/scss/_faq.scss */
   .faq-content .view {
     float: left;
     display: block;
@@ -619,7 +716,7 @@ mb-countdown {
     /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
     .faq-content .view:last-child {
       margin-right: 0; }
-  /* line 66, ../modules/core/scss/_faq.scss */
+  /* line 68, ../modules/core/scss/_faq.scss */
   .faq-content .description {
     float: left;
     display: block;
@@ -628,9 +725,13 @@ mb-countdown {
     /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
     .faq-content .description:last-child {
       margin-right: 0; }
-  /* line 68, ../modules/core/scss/_faq.scss */
+  /* line 70, ../modules/core/scss/_faq.scss */
   .faq-content ul li {
     list-style-type: none; }
+  @media screen and (max-width: 768px) {
+    /* line 48, ../modules/core/scss/_faq.scss */
+    .faq-content {
+      padding: 2.35765%; } }
 
 /* line 1, ../modules/core/scss/_footer.scss */
 .footer {

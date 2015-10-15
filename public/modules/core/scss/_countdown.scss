@@ -11,8 +11,8 @@
     text-align: center;
   }
 
-  &:before { @include triangle-divide(-7vh, auto, 7vh, 0, 0, 100vw, transparent, $light-gray); }
-  &:after { @include triangle-divide(auto, -7vh, 0, 100vw, 7vh, 0, $light-gray, transparent); }
+  &:before { @include triangle-divide-right(auto, 100%, 7vh, 0, 0, 100vw, transparent, $light-gray); }
+  &:after { @include triangle-divide-right(100%, auto, 0, 100vw, 7vh, 0, $light-gray, transparent); }
 }
 
 mb-countdown {

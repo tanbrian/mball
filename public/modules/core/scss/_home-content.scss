@@ -3,7 +3,10 @@
 .view-header {
   width: 30vw;
 
-  .content { padding-top: 100px; }
+  .content {
+    padding-top: 100px;
+    @include media($tablet) { padding-top: 20px; }
+  }
 
   h1,
   p {
@@ -37,6 +40,7 @@
   small { color: $light-gray; }
 
   .announcement:not(:first-child) { margin-top: 60px; }
+  @include media($tablet) { padding-top: 20px; }
 }
 
 .announcements-view,
@@ -82,6 +86,8 @@
   @include outer-container;
 
   margin-top: 40px;
+
+  @include media($tablet) { margin-top: 10px; }
 }
 
 .image-row {
@@ -89,6 +95,8 @@
 
   .text {
     @include span-columns(7);
+
+    @include media($mobile) { @include fill-parent; }
   }
 
   img {
@@ -96,6 +104,10 @@
 
     border: 3px solid $yellow;
     padding: 3px;
+
+    @include media($mobile) {
+      @include fill-parent;
+    }
   }
 }
 
@@ -145,10 +157,10 @@
 
     a {
       @include simple-transition(.2s);
-      color: lighten($purple, 5%);
+      color: lighten($purple, 20%);
       text-decoration: none;
 
-      &:hover { color: darken($purple, 20%); }
+      &:hover { color: $purple; }
     }
   }
 }
@@ -172,12 +184,7 @@
     margin-top: 7vh;
     position: relative;
 
-    &:before {
-      @include triangle-divide(-5vh, auto, 0, 0, 5vh, 100vw, transparent, lighten($dark-gray, 5%));
-      border-width: 0 0 5vh 100vw;
-      border-color: transparent transparent lighten($dark-gray, 5%) transparent;
-    }
-
+    &:before { @include triangle-divide-left(auto, 100%, 5vh, 100vw, lighten($dark-gray, 5%)); }
   }
 }
 
@@ -230,4 +237,14 @@
       color: $yellow;
     }
   }
+
+  @include media($tablet) {
+    display: none;
+  }
+}
+
+@include media($tablet) {
+  .view-header { display: none; }
+  .countdown-container { display: none; }
+  .view-content { width: 100vw; }
 }

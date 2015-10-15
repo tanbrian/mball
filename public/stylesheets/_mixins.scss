@@ -1,8 +1,8 @@
 // Mixins for global use.
 
-@mixin triangle-divide($top-offset, $bottom-offset,
-                       $top-width, $right-width, $bottom-width, $left-width,
-                       $right-color, $left-color) {
+@mixin triangle-divide-right($top-offset, $bottom-offset,
+                             $top-width, $right-width, $bottom-width, $left-width,
+                             $right-color, $left-color) {
   content: '';
   position: absolute;
 
@@ -14,6 +14,24 @@
   border-style: solid;
   border-width: $top-width $right-width $bottom-width $left-width;
   border-color: transparent $right-color transparent $left-color;
+}
+
+@mixin triangle-divide-left($top-offset, $bottom-offset,
+                            $bottom-width, $left-width,
+                            $bottom-color) {
+
+  content: '';
+  position: absolute;
+
+  top: $top-offset;
+  bottom: $bottom-offset;
+  width: 0;
+  height: 0;
+
+  border-style: solid;
+  border-width: 0 0 $bottom-width $left-width;
+  border-color: transparent transparent $bottom-color transparent;
+
 }
 
 @mixin display-flex() {

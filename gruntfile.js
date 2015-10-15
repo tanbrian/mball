@@ -92,7 +92,7 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         files: {
-          'public/dist/application.min.css' : 'public/stylesheets/main.scss'
+          'public/dist/application.min.css' : 'public/dist/application.css'
         }
       }
     },

@@ -1,15 +1,26 @@
+<!--
 <div class="breakpoint-info">
   <h1>DESKTOP</h1>
   <h1>TABLET</h1>
   <h1>MOBILE</h1>
 </div>
+-->
 
-<div class="landing-image">
+<div class="landing-image" ng-controller="LandingController as landing">
   <div class="container">
 
     <div class="landing-hero">
       <h1>UCSD CIRCLE K PRESENTS</h1>
       <h1 class="title">Masquerade Ball 2015</h1>
+    </div>
+
+    <div class="landing-links">
+      <div>
+        <a href="http://ucsdcki.ticketleap.com/mball2015/t/fb/" class="link-emphasis"><i class="fa fa-ticket"></i> GET TICKETS</a>
+      </div>
+      <div>
+        <a id="volunteer" ng-click="thank()" href="http://ucsdcki.org/events/masquerade-ball-decoration-workday-3">{{ message }}</a>
+      </div>
     </div>
 
   </div>
@@ -174,17 +185,17 @@
     <h1>OUR SPONSORS</h1>
   </div>
   <div class="container">
-    <a href="google.com"><img src="/modules/core/img/atlantis-logo.png"/></a>
-    <a href="google.com"><img src="/modules/core/img/costco-logo.png"/></a>
-    <a href="google.com"><img src="/modules/core/img/culture-shock-dance-logo.png"/></a>
-    <a href="google.com"><img src="/modules/core/img/dodgers-logo.png"/></a>
-    <a href="google.com"><img src="/modules/core/img/hornblower-logo.png"/></a>
-    <a href="google.com"><img src="/modules/core/img/maritime-museum-logo.png"/></a>
+    <a target="_blank" href="https://www.atlantiscasino.com"><img src="/modules/core/img/atlantis-logo.png"/></a>
+    <a target="_blank" href="http://www.costco.com"><img src="/modules/core/img/costco-logo.png"/></a>
+    <a target="_blank" href="http://www.cultureshockdancecenter.com"><img src="/modules/core/img/culture-shock-dance-logo.png"/></a>
+    <a target="_blank" href="http://losangeles.dodgers.mlb.com/index.jsp?c_id=la"><img src="/modules/core/img/dodgers-logo.png"/></a>
+    <a target="_blank" href="https://www.hornblower.com"><img src="/modules/core/img/hornblower-logo.png"/></a>
+    <a target="_blank" href="http://sdmaritime.org"><img src="/modules/core/img/maritime-museum-logo.png"/></a>
   </div>
   <div class="container">
-    <a href="google.com"><img src="/modules/core/img/sprinkles-logo.gif"/></a>
-    <a href="google.com"><img src="/modules/core/img/cravory-logo.png"/></a>
-    <a href="google.com"><img src="/modules/core/img/midway-logo.png"/></a>
+    <a target="_blank" href="http://sprinkles.com"><img src="/modules/core/img/sprinkles-logo.gif"/></a>
+    <a target="_blank" href="https://thecravory.com"><img src="/modules/core/img/cravory-logo.png"/></a>
+    <a target="_blank" href="http://www.midway.org"><img src="/modules/core/img/midway-logo.png"/></a>
   </div>
 
   <div class="separator">

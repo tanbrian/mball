@@ -25,6 +25,7 @@
     margin: 0 auto;
 
     list-style: none;
+    padding-right: 10px;
 
     li { padding-left: 10px; }
 
@@ -48,5 +49,20 @@
   a {
     color: $white;
     font-weight: 300;
+  }
+}
+
+@include media($tablet) {
+  .navbar {
+
+    .mobile-hide,
+    .logo { display: none; }
+    .nav-list { width: 100vw; }
+
+    ul { padding-left: 0; }
+
+    li {
+      &:last-child { padding-right: 5px; }
+    }
   }
 }
