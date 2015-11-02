@@ -186,6 +186,11 @@
 
     &:before { @include triangle-divide-left(auto, 100%, 5vh, 100vw, lighten($dark-gray, 5%)); }
   }
+
+  .center {
+    @include span-columns(4);
+    @include shift(4);
+  }
 }
 
 // Last section before footer
