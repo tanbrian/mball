@@ -158,7 +158,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
     var HOURS_IN_DAY = 24;
 
     // Masquerade Ball is on November 16, 2015 at 12:30 AM
-    var masqueradeBallDate = Date.UTC(2015, 10, 16, 8, 30, 0);
+    var masqueradeBallDate = Date.UTC(2015, 10, 15, 5, 0, 0);
     var timeoutId;
 
     // Calculates new countdown value every second
