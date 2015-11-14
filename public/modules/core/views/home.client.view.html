@@ -27,10 +27,11 @@
 </div>
 
 <div class="countdown-container">
-  <div class="container">
-    <h1>COUNTDOWN TO MBALL 2015</h1>
+  <div class="container" ng-controller="CountdownController">
 
-    <mb-countdown></mb-countdown>
+    <h1 ng-show="!pastDate">COUNTDOWN TO MBALL 2015</h1>
+    <mb-countdown ng-show="!pastDate"></mb-countdown>
+    <h1 ng-show="pastDate">THANKS FOR COMING TO MASQUERADE BALL!</h1>
 
   </div>
 </div>
@@ -213,12 +214,13 @@
     <a target="_blank" href="http://www.midway.org"><img src="/modules/core/img/midway-logo.png"/></a>
   </div>
   <div class="container">
-    <a target="_blank" href="http://chipotle.com"><img src="/modules/core/img/six-flags-logo.png"/></a>
-    <a target="_blank" href="http://chipotle.com"><img src="/modules/core/img/innout-logo.png"/></a>
-    <a target="_blank" href="http://chipotle.com"><img src="/modules/core/img/sd-chargers.png"/></a>
+    <a target="_blank" href="https://www.sixflags.com"><img src="/modules/core/img/six-flags-logo.png"/></a>
+    <a target="_blank" href="http://www.in-n-out.com"><img src="/modules/core/img/innout-logo.png"/></a>
+    <a target="_blank" href="http://www.chargers.com"><img src="/modules/core/img/sd-chargers.png"/></a>
   </div>
   <div class="container">
-    <a target="_blank" href="http://chipotle.com"><img class="center" src="/modules/core/img/chipotle-logo.png"/></a>
+    <a target="_blank" href="http://chipotle.com"><img class="third" src="/modules/core/img/chipotle-logo.png"/></a>
+    <a target="_blank" href="http://www.pieology.com"><img src="/modules/core/img/pieology-logo.png"/></a>
   </div>
 
 

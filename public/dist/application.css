@@ -551,20 +551,30 @@ mb-countdown {
     /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
     .sponsors-view .center:last-child {
       margin-right: 0; }
+  /* line 195, ../modules/core/scss/_home-content.scss */
+  .sponsors-view .third {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-left: 17.05961%; }
+    /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
+    .sponsors-view .third:last-child {
+      margin-right: 0; }
 
-/* line 198, ../modules/core/scss/_home-content.scss */
+/* line 203, ../modules/core/scss/_home-content.scss */
 .sign-off {
   background: linear-gradient(135deg, #55477c 0%, rgba(85, 71, 124, 0.6) 100%), url("/modules/core/img/group.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 400px; }
-  /* line 205, ../modules/core/scss/_home-content.scss */
+  /* line 210, ../modules/core/scss/_home-content.scss */
   .sign-off h1 {
     padding: 2.35765%;
     color: #fff;
     height: 100px;
     letter-spacing: .2em;
     text-align: center; }
-  /* line 216, ../modules/core/scss/_home-content.scss */
+  /* line 221, ../modules/core/scss/_home-content.scss */
   .sign-off .links {
     float: left;
     display: block;
@@ -575,7 +585,7 @@ mb-countdown {
     /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
     .sign-off .links:last-child {
       margin-right: 0; }
-    /* line 222, ../modules/core/scss/_home-content.scss */
+    /* line 227, ../modules/core/scss/_home-content.scss */
     .sign-off .links div {
       float: left;
       display: block;
@@ -586,7 +596,7 @@ mb-countdown {
       /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
       .sign-off .links div:last-child {
         margin-right: 0; }
-  /* line 230, ../modules/core/scss/_home-content.scss */
+  /* line 235, ../modules/core/scss/_home-content.scss */
   .sign-off a {
     -o-transition: 0.2s;
     -ms-transition: 0.2s;
@@ -597,25 +607,25 @@ mb-countdown {
     color: #fff;
     font-family: "Lato", sans-serif;
     padding: 7px; }
-    /* line 240, ../modules/core/scss/_home-content.scss */
+    /* line 245, ../modules/core/scss/_home-content.scss */
     .sign-off a:hover {
       border-color: #fdc070;
       color: #fdc070; }
   @media screen and (max-width: 768px) {
-    /* line 198, ../modules/core/scss/_home-content.scss */
+    /* line 203, ../modules/core/scss/_home-content.scss */
     .sign-off {
       display: none; } }
 
 @media screen and (max-width: 768px) {
-  /* line 252, ../modules/core/scss/_home-content.scss */
+  /* line 257, ../modules/core/scss/_home-content.scss */
   .view-header {
     display: none; }
 
-  /* line 253, ../modules/core/scss/_home-content.scss */
+  /* line 258, ../modules/core/scss/_home-content.scss */
   .countdown-container {
     display: none; }
 
-  /* line 254, ../modules/core/scss/_home-content.scss */
+  /* line 259, ../modules/core/scss/_home-content.scss */
   .view-content {
     width: 100vw; } }
 /* line 2, ../modules/core/scss/_map.scss */

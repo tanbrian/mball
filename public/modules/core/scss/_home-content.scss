@@ -191,6 +191,11 @@
     @include span-columns(4);
     @include shift(4);
   }
+
+  .third {
+    @include span-columns(4);
+    @include shift(2);
+  }
 }
 
 // Last section before footer

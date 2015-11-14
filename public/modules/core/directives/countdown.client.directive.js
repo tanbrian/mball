@@ -50,6 +50,13 @@
       difference -= $scope.minutes * SEC_IN_MINUTE;
 
       $scope.seconds = Math.floor(difference % SEC_IN_MINUTE);
+
+      if (Date.now > masqueradeBallDate) {
+        $scope.days = 0;
+        $scope.hours = 0;
+        $scope.minutes = 0;
+        $scope.seconds = 0;
+      }
     }, 1000);
 
     // Ends interval loop when element is destroyed to revent leaks.
