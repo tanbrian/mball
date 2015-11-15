@@ -259,8 +259,9 @@ a {
   /* line 9, ../modules/core/scss/_countdown.scss */
   .countdown-container h1 {
     letter-spacing: .2em;
-    text-align: center; }
-  /* line 14, ../modules/core/scss/_countdown.scss */
+    text-align: center;
+    line-height: 20vh; }
+  /* line 15, ../modules/core/scss/_countdown.scss */
   .countdown-container:before {
     content: '';
     position: absolute;
@@ -271,7 +272,7 @@ a {
     border-style: solid;
     border-width: 7vh 0 0 100vw;
     border-color: transparent transparent transparent #f3f3f3; }
-  /* line 15, ../modules/core/scss/_countdown.scss */
+  /* line 16, ../modules/core/scss/_countdown.scss */
   .countdown-container:after {
     content: '';
     position: absolute;
@@ -283,10 +284,10 @@ a {
     border-width: 0 100vw 7vh 0;
     border-color: transparent #f3f3f3 transparent transparent; }
 
-/* line 18, ../modules/core/scss/_countdown.scss */
+/* line 19, ../modules/core/scss/_countdown.scss */
 mb-countdown {
   width: 100%; }
-  /* line 21, ../modules/core/scss/_countdown.scss */
+  /* line 22, ../modules/core/scss/_countdown.scss */
   mb-countdown .time-value {
     float: left;
     display: block;
@@ -296,14 +297,14 @@ mb-countdown {
     /* line 89, ../lib/neat/app/assets/stylesheets/grid/_span-columns.scss */
     mb-countdown .time-value:last-child {
       margin-right: 0; }
-    /* line 26, ../modules/core/scss/_countdown.scss */
+    /* line 27, ../modules/core/scss/_countdown.scss */
     mb-countdown .time-value h1 {
       color: #55477c;
       float: left;
       font-size: 3em;
       letter-spacing: normal;
       margin-right: 15px; }
-    /* line 34, ../modules/core/scss/_countdown.scss */
+    /* line 35, ../modules/core/scss/_countdown.scss */
     mb-countdown .time-value h3 {
       color: #b4b4b4;
       font-family: "Merriweather", serif;

@@ -9,6 +9,7 @@
   h1 {
     letter-spacing: .2em;
     text-align: center;
+    line-height: 20vh;
   }
 
   &:before { @include triangle-divide-right(auto, 100%, 7vh, 0, 0, 100vw, transparent, $light-gray); }
